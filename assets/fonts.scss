@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('~/static/fonts/Gilroy-Regular.eot');
+    src: local('Gilroy'),
+        url('~/static/fonts/Gilroy-Regular.woff2') format('woff2'),
+        url('~/static/fonts/Gilroy-Regular.woff') format('woff'),
+        url('~/static/fonts/Gilroy-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Tektur_Bold';
+    src: url('~/static/fonts/Tektur-Bold.eot');
+    src: local('Tektur Bold'), local('Tektur-Bold'),
+        url('~/static/fonts/Tektur-Bold.woff2') format('woff2'),
+        url('~/static/fonts/Tektur-Bold.woff') format('woff'),
+        url('~/static/fonts/Tektur-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+

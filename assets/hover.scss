@@ -1,0 +1,20 @@
+@mixin hover-active() {
+    &:hover{
+        @content;
+    }
+}
+
+@mixin hover-transition($x){
+    -webkit-transition: $x;
+    -moz-transition: $x;
+    -ms-transition: $x;
+    -o-transition: $x;
+    transition: $x;
+}
+
+a {
+    @include hover-active {
+        color: $hover-color !important;
+    }
+    @include hover-transition(.5s);
+}

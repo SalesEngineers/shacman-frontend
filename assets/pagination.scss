@@ -1,0 +1,28 @@
+.filters-block {
+    fieldset {
+        border-color: $primary-color;
+    }
+    .select-input{
+        .v-icon {
+            color: $primary-color !important;
+        }
+        .v-chip--select {
+            background: $hover-color;
+        }
+        .v-label {
+            color: $primary-color !important;
+        }
+    }
+}
+.v-select-list {
+    .v-icon {
+        color: $primary-color;
+    }
+    .theme--light.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled) {
+        color: $primary-color;
+    }
+}
+.v-menu__content {
+    box-shadow: $card-shadow !important;
+    z-index: 10 !important;
+}

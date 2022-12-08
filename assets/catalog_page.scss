@@ -1,0 +1,26 @@
+.category-content :deep(h2) {
+    text-transform: uppercase;
+}
+.filters-block {
+    position: relative;
+    z-index: 10;
+}
+.subcategories .subcategory {
+    .v-btn {
+        background-color: $hover-color;
+        text-indent: 0;
+        letter-spacing: 0;
+        font-size: 16px;
+        box-shadow: unset !important;
+    } 
+}
+@include xs{
+    .content-padding {
+        padding-top: 90px;
+    }
+    .subcategories .subcategory {
+        .v-btn {
+            width: 100%;
+        } 
+    }
+}

@@ -1,0 +1,67 @@
+User-agent: *
+Disallow: /wp-admin
+Disallow: /?
+Disallow: /*?
+Disallow: /&
+Disallow: /*&
+Disallow: /author/
+Disallow: /embed
+Disallow: /page/
+Disallow: /trackback
+Disallow: /category
+Allow: /uploads
+Allow: /*.js
+Allow: /*.css
+Allow: /wp-*.png            
+Allow: /wp-*.jpg
+Allow: /wp-*.jpeg
+Allow: /wp-*.gif
+Allow: /wp-*.svg
+Allow: /wp-*.pdf
+Clean-param: add-to-cart /product-category/frontalnye-pogruzchiki/ 
+Clean-param: add-to-cart /product-category/frontalnye-pogruzchiki/page/3/ 
+Clean-param: add-to-cart /product-category/avtokrany/
+
+User-agent: GoogleBot 
+Disallow: /wp-admin
+Disallow: /?
+Disallow: /*?
+Disallow: /&
+Disallow: /*&
+Disallow: /author/
+Disallow: /embed
+Disallow: /page/
+Disallow: /trackback
+Disallow: /category
+Allow: /uploads
+Allow: /*.js
+Allow: /*.css
+Allow: /wp-*.png            
+Allow: /wp-*.jpg
+Allow: /wp-*.jpeg
+Allow: /wp-*.gif
+Allow: /wp-*.svg
+Allow: /wp-*.pdf
+
+User-agent: Yandex
+Disallow: /wp-admin
+Disallow: /?
+Disallow: /*?
+Disallow: /&
+Disallow: /*&
+Disallow: /author/
+Disallow: /embed
+Disallow: /page/
+Disallow: /trackback
+Disallow: /category
+Allow: /uploads
+Allow: /*.js
+Allow: /*.css
+Allow: /wp-*.png            
+Allow: /wp-*.jpg
+Allow: /wp-*.jpeg
+Allow: /wp-*.gif
+Allow: /wp-*.svg
+Allow: /wp-*.pdf
+
+Sitemap: https://xcmg-rf.ru/sitemap.xml
