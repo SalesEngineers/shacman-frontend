@@ -66,7 +66,7 @@ export default {
   props: {
     images: {
       type: Array,
-      default: () => ['/img/services/service.png', '/img/services/parts.png', '/img/services/lizing.png'],
+      default: () => ['/img/services/service.jpg', '/img/services/parts.jpg', '/img/services/lizing.jpg'],
     },
   },
 }

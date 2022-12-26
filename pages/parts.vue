@@ -126,7 +126,7 @@ export default {
         this.$store.commit('setBreadCrumbs', 
         [
             {
-            text: 'Официальный дилер XCMG',
+            text: 'Официальный дилер Shacman',
             disabled: false,
             href: '/',
             position: 1,

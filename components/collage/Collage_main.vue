@@ -13,7 +13,7 @@
       </p>
     </v-card>
     <v-card class="collage-card div3" outlined>
-      <v-img src="/img/collage/cars.png" alt="" />
+      <v-img src="/img/home/ofdiler-shacman.jpg" alt="" />
     </v-card>
     <v-card class="collage-card div4 pa-5 pa-md-7" outlined>
       <p>
@@ -30,7 +30,7 @@
       </p>
     </v-card>
     <v-card class="collage-card div6" outlined>
-      <v-img src="/img/collage/service.png" alt="" />
+      <v-img src="/img/home/service.jpg" alt="" />
     </v-card>
   </div>
 </template>
@@ -64,7 +64,7 @@ export default {
   }
 
   .div3 {
-    grid-area: 1/7/5/13;
+    grid-area: 2/7/5/13;
   }
 
   .div4 {
@@ -76,7 +76,7 @@ export default {
   }
 
   .div6 {
-    grid-area: 9/7/13/1;
+    grid-area: 9/7/12/1;
   }
 
   .v-image {

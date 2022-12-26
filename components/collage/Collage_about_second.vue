@@ -2,33 +2,33 @@
   <div class="collage-wrap">
     <v-card class="collage-card div1 pa-5 pa-md-7" outlined>
       <p>
-        <span class="third-text collage-bold-text">01</span><br>
-        <span class="primary-text">место в рейтинге дилеров xсmg в рф</span>
+        <span class="third-text collage-bold-text">03</span><br>
+        <span>место в рейтинге дилеров Shacman в рф</span>
       </p>
     </v-card>
     <v-card class="collage-card div2 pa-5 pa-md-7" outlined>
       <p>
-        <span class="third-text collage-bold-text">12</span><br>
-        <span class="primary-text">филиалов в крупных городах</span>
+        <span class="third-text collage-bold-text">28</span><br>
+        <span>филиалов в крупных городах</span>
       </p>
     </v-card>
     <v-card class="collage-card div3" outlined>
-      <v-img src="/img/collage/office_Komtrans.png" alt="" />
+      <v-img src="/img/about/about-komtrans-1.jpg" alt="" />
     </v-card>
     <v-card class="collage-card div4 pa-5 pa-md-7" outlined>
       <p>
-        <span class="third-text collage-bold-text">10</span><br>
-        <span class="primary-text">место в рейтинге дилеров xсmg в мире</span>
+        <span class="third-text collage-bold-text">400</span><br>
+        <span>единиц техники в наличии на складе</span>
       </p>
     </v-card>
     <v-card class="collage-card div5 pa-5 pa-md-7" outlined>
       <p>
         <span class="third-text collage-bold-text">1000</span><br>
-        <span class="primary-text">единиц техники реализуется в год</span>
+        <span>единиц техники реализуется в год</span>
       </p>
     </v-card>
     <v-card class="collage-card div6" outlined>
-      <v-img src="/img/collage/office_inside.png" alt="" />
+      <v-img src="/img/about/about-komtrans-2.jpg" alt="" />
     </v-card>
   </div>
 </template>

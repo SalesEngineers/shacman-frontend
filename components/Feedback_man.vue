@@ -14,7 +14,7 @@
         </v-col>
         <v-col cols="12" sm="6">
             <div class="d-flex flex-column justify-end fill-height">
-                    <img loading="lazy" src="/img/xcmg-spectech.webp"/>
+                    <img loading="lazy" src="/img/form.jpg"/>
             </div>
         </v-col>
     </v-row>

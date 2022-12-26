@@ -12,7 +12,7 @@
                                 <client-only>
                                     <div class="footer-contact_block">
                                         <nuxt-link to="/" style="line-height: 1;">
-                                            <img class="footer-logo" height="35" src="/img/logo_xcmg.svg">
+                                            <img class="footer-logo" height="44" src="/img/logo_shacman.svg">
                                         </nuxt-link>
                                             <span class="footer-title d-block pb-5" v-if="settings.phone">
                                                 <a :href="settings.phone.href">{{ settings.phone.name }}</a>

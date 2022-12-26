@@ -2,33 +2,33 @@
   <div class="collage-wrap">
     <v-card class="collage-card div1 pa-5 pa-md-7" outlined>
       <p>
-        <span class="secondary-text collage-bold-text">03</span><br>
-        <span class="primary-text">место в&nbsp;мире по&nbsp;объёму продаж спецтехники</span>
+        <span class="secondary-text collage-bold-text">10</span><br>
+        <span class="primary-text">предприятий в группе Shaanxi Auto</span>
       </p>
     </v-card>
     <v-card class="collage-card div2 pa-5 pa-md-7" outlined>
       <p>
-        <span class="secondary-text collage-bold-text">01</span><br>
-        <span class="primary-text">место в&nbsp;отрасли строительной техники Китая</span>
+        <span class="secondary-text collage-bold-text">ТОП-500</span><br>
+        <span class="primary-text">крупнейших китайских компаний</span>
       </p>
     </v-card>
     <v-card class="collage-card div3" outlined>
-      <v-img src="/img/collage/office_XCMG.png" alt="" />
+      <v-img src="/img/about/02.jpg"  alt="" />
     </v-card>
     <v-card class="collage-card div4 pa-5 pa-md-7" outlined>
       <p>
-        <span class="secondary-text collage-bold-text">2000</span><br>
-        <span class="primary-text">сервисных терминалов</span>
+        <span class="secondary-text collage-bold-text">300</span><br>
+        <span class="primary-text">сотрудников</span>
       </p>
     </v-card>
     <v-card class="collage-card div5 pa-5 pa-md-7" outlined>
       <p>
-        <span class="secondary-text collage-bold-text">1.6</span><br>
-        <span class="primary-text">объем годового экспорта (млрд. долл. США)</span>
+        <span class="secondary-text collage-bold-text">200 000</span><br>
+        <span class="primary-text">годовой объем производства и продаж автомобилей</span>
       </p>
     </v-card>
     <v-card class="collage-card div6" outlined>
-      <v-img src="/img/collage/view.png" alt="" />
+      <v-img src="/img/about/01.jpg" alt="" />
     </v-card>
   </div>
 </template>
@@ -62,7 +62,7 @@ export default {
   }
 
   .div3 {
-    grid-area: 1/7/5/13;
+    grid-area: 2/7/5/13;
   }
 
   .div4 {
@@ -74,7 +74,7 @@ export default {
   }
 
   .div6 {
-    grid-area: 9/7/13/1;
+    grid-area: 9/7/12/1;
   }
 
   .v-image {

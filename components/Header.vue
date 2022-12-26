@@ -43,7 +43,7 @@
                 <div class="container">
                     <div class="upper-header-content">
                         <span class="d-none d-sm-block">
-                            Официальный дилер XCMG
+                            Официальный дилер Shacman
                         </span>
                         <client-only>
                             <span v-if="settings.email">
@@ -67,7 +67,7 @@
                     <div class="bottom-header-content">
                         <span class="d-flex">
                             <nuxt-link to="/" style="line-height: 1;">
-                                <img height="35" src="/img/logo_xcmg.svg">
+                                <img height="44" src="/img/logo_shacman.svg">
                             </nuxt-link>
                         </span>
                         <div class="d-none d-md-block">
@@ -330,7 +330,7 @@ export default {
         @include hover-transition(.5s);
     }
     .bottom-header-content {
-        height: 60px;
+        height: 80px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -384,10 +384,21 @@ export default {
         width: 24px;
         height: 24px;
     }
+
+    @media (max-width: 599px) {
+        .bottom-header-content {
+            height: 62px;
+
+            img {
+                height: 30px;
+            }
+        }
+    }
+
     @include xl {
         .upper-header-content {
             font-size: 16px;
-        }
+        }        
     }
     @include xs {         
         .v-breadcrumbs li {
