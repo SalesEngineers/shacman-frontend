@@ -1,71 +1,40 @@
 <template>
     <div>
-        <MainWindow title="Оригинальные запчасти для&nbsp;спецтехники XCMG " :slides="['/img/main-window/xcmg-parts.webp']"/>
-        <v-container class="content-padding">
+        <MainWindow title="Оригинальные запчасти для&nbsp;спецтехники XCMG " :slides="['/img/parts/slide-1.jpg']"/>
+        <v-container>
             <v-row align="center" class="block-padding">
                 <v-col cols="12" lg="6">
                     <div class="mr-xl-9 mr-lg-4">
                         <h2 class="text-uppercase mb-md-14 mb-9">
                             Запчасти <br class="d-none d-lg-inline">для спецтехники   
                         </h2>
-                        <p class="pb-9 mb-md-0">
-                            Компания &laquo;KOMTRANS Group&raquo; предлагает качественные запчасти для спецтехники XCMG. Мы&nbsp;реализуем оригинальные, аналоговые и&nbsp;универсальные изделия от&nbsp;известных и&nbsp;проверенных производителей. Всегда в&nbsp;наличии на&nbsp;складе запасные части в&nbsp;широком ассортименте. Поставки выполняются по&nbsp;всей территории России через наши филиалы, поэтому необходимый товар вы&nbsp;получите в&nbsp;самые сжатые сроки.<br><br>
-                            Заявки быстро обрабатываются и&nbsp;комплектуются. Приобретенную продукцию вы&nbsp;можете забрать самостоятельно с&nbsp;регионального склада нашего представительства, либо воспользоваться нашим сервисом адресной доставки.
-                        </p>    
+                        <p>Компания «KOMTRANS Group» предлагает качественные запчасти для спецтехники Shacman. Мы реализуем оригинальные, аналоговые и универсальные изделия от известных и проверенных производителей. Всегда в наличии на складе запасные части в широком ассортименте. Поставки выполняются по всей территории России через наши филиалы, поэтому необходимый товар вы получите в самые сжатые сроки.</p>
+                        <p class="pb-9 mb-md-0">Заявки быстро обрабатываются и комплектуются. Приобретенную продукцию вы можете забрать самостоятельно с регионального склада нашего представительства, либо воспользоваться нашим сервисом адресной доставки.</p>    
                     </div>
                 </v-col>
                 <v-col cols="12" lg="6">
                     <Collage/>
                 </v-col>
-            </v-row>
+            </v-row>            
 
-            <div class="catalog-block block-padding">
-                <h2 class="text-uppercase mb-md-14 mb-9">
-                    Каталог
-                </h2>
-                <v-row>
-                    <v-col cols="12" sm="6" md="4" lg="3" v-for="(item, index) in catalog_items" :key="index" :style="$vuetify.breakpoint.xl ? ' flex: 1 0 20%; max-width: 20%;' : ''">
-                        <div class="content-card_wrapper" @click="$store.commit('onModalWindow', {title: 'Получить консультацию', btnName: 'Получить консультацию'})">
-                            <v-card :class="item.expand ? 'shadow-primary' : ''" @mouseover="item.expand = true" @mouseleave="item.expand = false">
-                                <div class="content-card">
-                                    <v-img
-                                        height="250"
-                                        :src="item.img"
-                                    ></v-img>
-                                    <p class="card-title" v-html="item.title"></p>
-                                </div>
-                                <v-expand-transition>
-                                    <v-btn color="primary" height="43px" class="text-none font-weight-bold" absolute block v-show="item.expand">
-                                        Получить консультацию
-                                    </v-btn>
-                                </v-expand-transition>
-                            </v-card>
-                        </div>
-                    </v-col>
-                </v-row>
-            </div>
-
-
-            <h2 class="text-uppercase mb-md-14 mb-9">
-                Контакты
-            </h2>
-            <ContactCardsList/>
+            <v-contacts></v-contacts>
         </v-container>
-        <FeedbackMan title="Подберём запчасти<br>специально для&nbsp;вас!" content="Квалифицированный менеджер поможет с выбором и ответит на любой вопрос " btnTitle="Подобрать запчасти"/>
+        
+        <FeedbackMan title="Подберём запчасти<br>специально для&nbsp;вас!" content="Квалифицированный менеджер поможет с выбором и ответит на любой вопрос " btnTitle="Подобрать технику"/>
     </div>
 </template>
 
 <script>
 import MainWindow from '~/components/Main_window.vue'
 import Collage from '~/components/collage/Collage_parts.vue'
-import ContactCardsList from '~/components/Contact_cards_list.vue'
+import VContacts from "~/components/VContacts/index.vue";
 import FeedbackMan from '~/components/Feedback_man.vue'
 
 export default {
     components: {
         MainWindow,
         Collage,
-        ContactCardsList,
+        VContacts,
         FeedbackMan
     },
     head () {
