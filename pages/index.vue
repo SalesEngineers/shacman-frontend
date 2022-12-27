@@ -5,11 +5,7 @@
             btnTitle="Перейти в каталог"
             title="Официальный&nbsp;дилер  спецтехники Shacman в&nbsp;России"
             :slides="[
-                '/img/main-window/xcmg-slider-general.jpg',
-                '/img/main-window/xcmg-diler-oficial.webp',
-                '/img/main-window/xcmg-oficial-diler.webp',
-                '/img/main-window/xcmg-diler.webp',
-                '/img/main-window/diler-xcmg.webp',
+                '/img/main-window/xcmg-slider-general.jpg'
             ]"
         />
         <v-container class="content-padding">
