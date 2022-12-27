@@ -73,10 +73,8 @@
             </div>
 
             <Feedback/>
-            <h2 class="text-uppercase mb-md-14 mb-9">
-                Контакты
-            </h2>
-            <ContactCardsList/>
+            
+            <v-contacts></v-contacts>
 
         </v-container>
         <FeedbackMan title="Подберём технику специально для вас!" content="Квалифицированный менеджер поможет с выбором спецтехники под вашу задачу и ответит на любой вопрос" btnTitle="Подобрать технику"/>
@@ -84,7 +82,7 @@
 </template>
 
 <script>
-import ContactCardsList from '~/components/Contact_cards_list.vue'
+import VContacts from '~/components/VContacts/index.vue'
 import FeedbackMan from '~/components/Feedback_man.vue'
 import Banner from '~/components/Banner.vue'
 import Catalog from '~/components/Catalog_tech_list.vue'
@@ -94,7 +92,7 @@ import CategoryInfo from '~/components/Category_info_block.vue'
 
 export default {
     components: {
-        ContactCardsList,
+        VContacts,
         FeedbackMan,
         Banner,
         Catalog,
