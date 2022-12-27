@@ -13,7 +13,7 @@
       </p>
     </v-card>
     <v-card class="collage-card div3" outlined>
-      <v-img src="/img/collage/excavator.jpg" alt="" />
+      <v-img src="/img/lizing/leasing-terms-2.jpg" alt="" />
     </v-card>
     <v-card class="collage-card div4 pa-4 pa-md-7" outlined>
       <p>
@@ -29,7 +29,7 @@
       </p>
     </v-card>
     <v-card class="collage-card div6" outlined>
-      <v-img src="/img/collage/frontal.png" alt="" />
+      <v-img src="/img/lizing/leasing-terms-1.jpg" alt="" />
     </v-card>
   </div>
 </template>

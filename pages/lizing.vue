@@ -1,6 +1,6 @@
 <template>
   <div>
-    <MainWindow btnTitle="Оставить заявку" title="Лизинг спецтехники XCMG " :slides="['/img/main-window/lizing-xcmg.webp']"/>
+    <MainWindow btnTitle="Получить консультацию" title="Лизинг спецтехники Shacman" :slides="['/img/lizing/slide-1.jpg']"/>
     <v-container class="content-padding">
         <v-row align="center" class="block-padding mt-0">
             <v-col cols="12" lg="6">
@@ -39,10 +39,7 @@
             </v-col>
         </v-row>
 
-        <h2 class="text-uppercase mb-md-14 mb-9">
-            Контакты
-        </h2>
-        <ContactCardsList/>
+        <v-contacts></v-contacts>
     </v-container>
     <FeedbackMan title="Подайте заявку на&nbsp;лизинг" content="Квалифицированный менеджер поможет с выбором лизинговой программы и ответит на любой вопрос" btnTitle="Подать заявку"/>
   </div>
@@ -51,14 +48,14 @@
 <script>
 import MainWindow from '~/components/Main_window.vue'
 import Collage from '~/components/collage/Collage_lizing.vue'
-import ContactCardsList from '~/components/Contact_cards_list.vue'
+import VContacts from '~/components/VContacts/index.vue'
 import FeedbackMan from '~/components/Feedback_man.vue'
 
 export default {
     components: {
         MainWindow,
         Collage,
-        ContactCardsList,
+        VContacts,
         FeedbackMan
     },
     head () {
@@ -78,10 +75,10 @@ export default {
                     img: '/img/lizing/sber.svg',
                 },
                 {
-                    img: '/img/lizing/alfa.svg',
+                    img: '/img/lizing/vtb.svg',
                 },
                 {
-                    img: '/img/lizing/vtb.svg',
+                    img: '/img/lizing/alfa.svg',
                 },
                 {
                     img: '/img/lizing/element.svg',
