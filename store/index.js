@@ -4,8 +4,8 @@ export const state = () => ({
   visabilityHeader: false,
   breadcrumbs: [],
   categories: [],
-  settings: [],
-  contacts: null,
+  settings: {},
+  contacts: [],
   articles: [],
   addressMap: null,
   showModal: false,
@@ -72,19 +72,19 @@ export const mutations = {
     state.addressMap = addressMap;
   },
   setBreadCrumbs(state, breadCrumbs) {
-    state.breadcrumbs = breadCrumbs;
+    state.breadcrumbs = breadCrumbs || [];
   },
   setCategories(state, categories) {
-    state.categories = categories;
+    state.categories = categories || [];
   },
   setSettings(state, settings) {
-    state.settings = settings;
+    state.settings = settings || {};
   },
   setContacts(state, contacts) {
-    state.contacts = contacts;
+    state.contacts = contacts || [];
   },
   setArticles(state, articles) {
-    state.articles = articles;
+    state.articles = articles || [];
   },
   onModalWindow(
     state,
@@ -130,4 +130,7 @@ export const getters = {
   getArticles(state) {
     return state.articles;
   },
+  getSettings(state) {
+    return state.settings;
+  }
 };
