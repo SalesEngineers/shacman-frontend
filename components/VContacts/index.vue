@@ -1,5 +1,5 @@
 <template>
-    <div class="contacts block-padding">
+    <div class="contacts">
         <div
             class="
                 d-sm-flex d-block
