@@ -1,11 +1,13 @@
 <template>
    <div>
-        <MainWindow btnTitle="Получить консультацию" title="Сервисное обслуживание спецтехники XCMG" :slides="['/img/main-window/service-xcmg-ru.webp','/img/main-window/xcmg-service.webp','/img/main-window/service-xcmg.webp','/img/main-window/service-centr-xcmg.webp']"/>
+        <MainWindow btnTitle="Получить консультацию" title="Сервисное обслуживание спецтехники Shacman в Красноярске" :slides="['/img/services/slide-1.jpg']"/>
         <div class="content-padding pb-0">
             <v-container>
                 <v-row class="align-center block-padding flex-row flex-md-row-reverse">
                     <v-col cols="12" md="6">
-                        <iframe loading="lazy" class="video mb-8 mb-md-0" src="https://www.youtube.com/embed/levKN2TrBFM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <client-only>
+                            <iframe loading="lazy" class="video mb-8 mb-md-0" src="https://www.youtube.com/embed/XxR2MIly3ZE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </client-only>
                     </v-col>
 
                     <v-col cols="12" md="6">
@@ -25,7 +27,7 @@
                         <p>&laquo;KOMTRANS Group&raquo; имеет 12&nbsp;сервисных центров и&nbsp;20&nbsp;выездных бригад. Специалисты компании всегда готовы выехать в&nbsp;любые места эксплуатации техники и&nbsp;провести ремонт, максимально сократив простои. При этом транспортировка спецтехники не&nbsp;требуется.</p>
                     </v-col>
                     <v-col cols="12" md="6">
-                        <v-img src="/img/car_people.png" alt="car people"/>
+                        <v-img src="/img/services/truck.jpg" alt="Выездной сервис в любую точку России"/>
                     </v-col>
                 </v-row>
 
@@ -45,7 +47,7 @@
                     <v-col cols="12" md="4">
                         <v-card class="shadow-text-card">
                         <p class="card-title primary-text text-uppercase">Сертификация</p>
-                        <p class="mb-0">&laquo;KOMTRANS Group&raquo;&nbsp;&mdash; сертифицированный сервис, аккредитованный XCMG.</p>
+                        <p class="mb-0">&laquo;KOMTRANS Group&raquo;&nbsp;&mdash; сертифицированный сервис, аккредитованный Shacman.</p>
                         </v-card>
                     </v-col>
                 </v-row>
@@ -78,14 +80,14 @@
                     <v-row class="align-center mb-8 mb-xl-16">
                         <v-col cols="12" md="6">
                             <h2 class="text-uppercase mb-md-14 mb-9">Услуги</h2>
-                            <p>Мы&nbsp;предлагаем широкий спектр услуг по&nbsp;техническому обслуживанию, диагностике, ремонту спецтехники и&nbsp;навесного оборудования. Занимаемся препрограммированием, установкой дополнительного оборудования, систем взвешивания, датчиков.<br><br>
-                                Обслуживание и&nbsp;проведение&nbsp;ТО купленной техники вы&nbsp;можете доверить компании &laquo;KOMTRANS Group&raquo;&nbsp;&mdash; сервис аккредитован брендом XCMG.</p>
+                            <p>Мы предлагаем широкий спектр услуг по техническому обслуживанию, диагностике, ремонту спецтехники и навесного оборудования. Занимаемся препрограммированием, установкой дополнительного оборудования, систем взвешивания, датчиков.</p>
+                            <p>Обслуживание и проведение ТО купленной техники вы можете доверить компании «KOMTRANS Group» — сервис аккредитован брендом Shacman.</p>
                         </v-col>
                         <v-col cols="12" md="6">
                             <div class="service-card">
-                                <v-img class="service-card__img" src="/img/repair_man.png" alt="repair man"/>
+                                <v-img class="service-card__img" src="/img/services/service-2.jpg" alt="repair man"/>
                                 <div class="px-5 px-xl-9 py-5 py-xl-6">
-                                    <p class="card-title">Авторизованный сервис XCMG</p>
+                                    <p class="card-title">Авторизованный сервис Shacman</p>
                                     <p class="ma-0">Обслуживание спецтехники в&nbsp;&laquo;KOMTRANS Group&raquo; не&nbsp;повлечёт прекращения официальной гарантии</p>
                                 </div>
                             </div>
@@ -154,7 +156,6 @@
                 <h2 class="text-uppercase mb-md-14 mb-9">
                     Контакты
                 </h2>
-                <ContactCardsList/>
             </v-container>
             <Ymap/>
         </div>
@@ -167,7 +168,7 @@ import MainWindow from '~/components/Main_window.vue'
 import Ymap from '~/components/Ymap.vue'
 import FeedbackMan from '~/components/Feedback_man.vue'
 import Catalog from '~/components/Catalog_cards_list.vue'
-import ContactCardsList from '~/components/Contact_cards_list.vue'
+import VContacts from '~/components/VContacts/index.vue'
 import { mapState } from 'vuex'
 
 export default {
@@ -176,7 +177,7 @@ export default {
       FeedbackMan,
       Catalog,
       Ymap,
-      ContactCardsList
+      VContacts
     },    
     head () {
         return {
