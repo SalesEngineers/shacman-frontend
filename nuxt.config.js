@@ -74,13 +74,13 @@ export default {
       options: {customProperties: true},
       themes: {
         light: {
-          primary: '#0154A6',
-          secondary: '#1FB0E6',
+          primary: '#0068AA',
+          secondary: '#66ACE7',
           third: '#FEC210',
           thirdBlack: '#E4AE0E',
           anchor: "#FFFFFF",
           accent: '#8c9eff',
-          error: '#b71c1c',
+          error: '#EE1B2D',
         }
       }
     }
