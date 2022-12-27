@@ -28,9 +28,6 @@ export default {
     }
   },
   created () {
-    this.$store.dispatch('loadCategories')
-    this.$store.dispatch('loadSettings')
-    this.$store.dispatch('loadContacts')
     this.$store.commit('offModalWindow')
   },
 }
