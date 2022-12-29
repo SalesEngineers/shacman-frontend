@@ -154,7 +154,7 @@
 
 <script>
 import VContactsMap from "./VContactsMap.vue";
-import { mapState } from "vuex";
+import { mapGetters } from "vuex";
 
 export default {
     components: {
@@ -169,26 +169,20 @@ export default {
         };
     },
 
-    mounted() {
-        if (
-            !this.$store.getters.getContacts ||
-            this.$store.getters.getContacts.length == 0
-        ) {
-            this.$store.dispatch("loadContacts");
-        } else {
-            this.setCurrentCity(this.contacts[0]);
-        }
-    },
-
     computed: {
-        ...mapState(["contacts"]),
+        ...mapGetters({
+            contacts: "getContacts"
+        }),
     },
 
     watch: {
-        contacts(newCity, oldCity) {
-            if (oldCity?.length == 0 && newCity?.length > 0) {
-                this.setCurrentCity(newCity[0]);
-            }
+        contacts: {
+            handler(newCity, oldCity) {
+                if (!oldCity && newCity?.length > 0) {
+                    this.setCurrentCity(newCity[0]);
+                }
+            },
+            immediate: true
         },
     },
     methods: {
