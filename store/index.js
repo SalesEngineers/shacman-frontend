@@ -28,7 +28,7 @@ export const actions = {
   },
   async loadCategories({ commit }) {
     await axios
-      .get(`https://api.xcmg-rf.ru/api/categories`)
+      .get(`http://api.shacman.marketolog.sale/api/categories`)
       .then((r) => r.data.data)
       .then((categories) => {
         commit("setCategories", categories);
@@ -36,7 +36,7 @@ export const actions = {
   },
   async loadSettings({ commit }) {
     await axios
-      .get(`https://api.xcmg-rf.ru/api/settings`)
+      .get(`http://api.shacman.marketolog.sale/api/settings`)
       .then((r) => r.data.data)
       .then((settings) => {
         commit("setSettings", settings);
@@ -44,7 +44,7 @@ export const actions = {
   },
   async loadContacts({ commit }) {
     await axios
-      .get(`https://api.xcmg-rf.ru/api/contacts`)
+      .get(`http://api.shacman.marketolog.sale/api/contacts`)
       .then((r) => r.data.data)
       .then((contacts) => {
         commit("setContacts", contacts);
@@ -53,7 +53,7 @@ export const actions = {
   },
   async loadArticles({ commit }) {
     await axios
-      .get(`https://api.xcmg-rf.ru/api/articles`)
+      .get(`http://api.shacman.marketolog.sale/api/articles`)
       .then((r) => r.data.data)
       .then((articles) => {
         commit("setArticles", articles);
