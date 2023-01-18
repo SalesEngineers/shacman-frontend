@@ -28,7 +28,7 @@ export const actions = {
   },
   async loadCategories({ commit }) {
     await axios
-      .get(`https://shacman-rf.ru/api/categories`)
+      .get(`https://api.shacman-rf.ru/api/categories`)
       .then((r) => r.data.data)
       .then((categories) => {
         commit("setCategories", categories);
@@ -36,7 +36,7 @@ export const actions = {
   },
   async loadSettings({ commit }) {
     await axios
-      .get(`https://shacman-rf.ru/api/settings`)
+      .get(`https://api.shacman-rf.ru/api/settings`)
       .then((r) => r.data.data)
       .then((settings) => {
         commit("setSettings", settings);
@@ -44,7 +44,7 @@ export const actions = {
   },
   async loadContacts({ commit }) {
     await axios
-      .get(`https://shacman-rf.ru/api/contacts`)
+      .get(`https://api.shacman-rf.ru/api/contacts`)
       .then((r) => r.data.data)
       .then((contacts) => {
         commit("setContacts", contacts);
@@ -53,7 +53,7 @@ export const actions = {
   },
   async loadArticles({ commit }) {
     await axios
-      .get(`https://shacman-rf.ru/api/articles`)
+      .get(`https://api.shacman-rf.ru/api/articles`)
       .then((r) => r.data.data)
       .then((articles) => {
         commit("setArticles", articles);
