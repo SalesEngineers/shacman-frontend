@@ -181,11 +181,11 @@ export default {
     },    
     head () {
         return {
-        title: 'Сервисное обслуживание спецтехники XCMG у официального дилера',
+        title: 'Сервисное обслуживание спецтехники Shacman у официального дилера',
         meta: [
             { charset: 'utf-8' },
             { hid: 'description', name: 'description', content: 'Специалисты компании КОМТРАНС производят диагностику грузовых автомобилей с выездом на место стоянки. 14 экипажей выездных бригад.'},
-            { hid: 'keywords', name: 'keywords', content: ''}
+            { hid: 'keywords', name: 'keywords', content: 'сервисное обслуживание спецтехники shacman, ремонт, шакман, шахман'}
         ]
         }
     },

@@ -63,8 +63,8 @@ export default {
         title: 'Лизинг китайской техники',
         meta: [
             { charset: 'utf-8' },
-            { hid: 'description', name: 'description', content: 'Лизинг спецтехники XCMG - Условия: Первоначальный взнос от 10% ⬥ Срок лизинга от 1 до 5 лет ⬥ Удорожание до 5% ⬥ Досрочное погашение.'},
-            { hid: 'keywords', name: 'keywords', content: ''}
+            { hid: 'description', name: 'description', content: 'Лизинг спецтехники Shacman - Условия: Первоначальный взнос от 10% ⬥ Срок лизинга от 1 до 5 лет ⬥ Удорожание до 5% ⬥ Досрочное погашение.'},
+            { hid: 'keywords', name: 'keywords', content: 'лизинг спецтехники shacman, шахман, шакман'}
         ]
         }
     },

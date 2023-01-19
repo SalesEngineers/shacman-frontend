@@ -38,8 +38,8 @@ export default {
         title: 'Контакты - Официальный дилер техники',
         meta: [
             { charset: 'utf-8' },
-            { hid: 'description', name: 'description', content: 'Контактные данные официального дилера техники XCMG ➤ Телефоны, адреса и e-mail филиалов по городам России.'},
-            { hid: 'keywords', name: 'keywords', content: ''}
+            { hid: 'description', name: 'description', content: 'Контактные данные официального дилера техники Shacman ➤ Телефоны, адреса и e-mail филиалов по городам России.'},
+            { hid: 'keywords', name: 'keywords', content: 'контактные данные официального дилера техники shacman, шакман, шахман, контакты, телефон, адрес, e-mail'}
         ]
         }
     },
