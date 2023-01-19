@@ -336,7 +336,7 @@
                         itemscope
                         itemtype="http://schema.org/BreadcrumbList"
                         class="pa-0"
-                        :items="$store.getters.getBreadcrumbs"
+                        :items="displayBreadcrumbs"
                     >
                         <template v-slot:item="{ item }">
                             <li

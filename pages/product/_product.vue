@@ -69,7 +69,7 @@
                             </div>
                         </div>
                         <div class="lizing-content test-drive-link__wrapeer">
-                            <p class="mb-0 font-weight-bold text-uppercase">{{ product.categories[1].name }} XCMG в лизинг</p>
+                            <p class="mb-0 font-weight-bold text-uppercase">{{ product.categories[product.categories.length - 1].name }} XCMG в лизинг</p>
                             <p class="mb-5">с первоначальным взносом от 10%</p>
                             <span class="product-card-text href-primary underline-href font-weight-bold" @click="$store.commit('onModalWindow', {title: 'Рассчитать лизинг', btnName: 'Рассчитать'})">Рассчитать лизинг</span>
                         </div>
@@ -325,9 +325,9 @@ export default {
             position: 2,
             },
             {
-            text: this.product.categories[1].name,
+            text: this.product.categories[this.product.categories.length - 1].name,
             disabled: false,
-            href: '/product-category/' + this.product.categories[1].url + '/',
+            href: '/product-category/' + this.product.categories[this.product.categories.length - 1].url + '/',
             position: 3,
             },
             {
@@ -352,7 +352,7 @@ export default {
         //Главные характеристики
         this.characteristics = this.product.characteristics
         this.product.characteristics.forEach((char) => {
-            this.product.categories[1].product_main_characteristic_ids.forEach(mainChar => {
+            this.product.categories[this.product.categories.length - 1].product_main_characteristic_ids.forEach(mainChar => {
                 if(char.id == mainChar) {
                     this.mainCharacteristics.push(char)
                     this.characteristics = this.characteristics.filter(function(item) {
