@@ -4,7 +4,7 @@ for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src =
 k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
 (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-ym(50677882, "init", {
+ym(49438069, "init", {
     clickmap:true,
     trackLinks:true,
     accurateTrackBounce:true,
