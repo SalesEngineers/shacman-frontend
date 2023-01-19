@@ -7,8 +7,8 @@ export default {
     trailingSlash: true,
   },
   head: {
-    titleTemplate: '%s - XCMG',
-    title: 'XCMG',
+    titleTemplate: '%s - Shacman',
+    title: 'Shacman',
     htmlAttrs: {
       lang: 'en'
     },

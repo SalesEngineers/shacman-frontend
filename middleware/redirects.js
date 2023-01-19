@@ -17,7 +17,7 @@ export default function ({ route, redirect }) {
   handRedirect("/shop/betonosmesitel/avtobetonosmesitel-shacman-sx5258gjbdr384-f3000-6h4/", "/product/avtobetonosmesitel-shacman-sx5258gjbdr384-f3000-6x4/");
   handRedirect("/shop/betonosmesitel/avtobetonosmesitel-shacman-sx5316gjbdt326-f3000-8h4/", "/product/avtobetonosmesitel-shacman-sx5316gjbdt326-f3000-8x4/");
   handRedirect("/shop/betonosmesitel/avtobetonosmesitel-shacman-sx5318gjbdt326-f3000-8h4/", "/product/avtobetonosmesitel-shacman-sx5318gjbdt326-f3000-8x4/");
-  handRedirect("/shop/bortovye-gruzoviki/bortovoj-gruzovik-shacman-sx1164ul561-6h2/", "/product/bortovoj-gruzovik-shacman-sx1164ul561-6x2//");
+  handRedirect("/shop/bortovye-gruzoviki/bortovoj-gruzovik-shacman-sx1164ul561-6h2/", "/product/bortovoj-gruzovik-shacman-sx1164ul561-6x2/");
   handRedirect("/shop/bortovye-gruzoviki/bortovoj-gruzovik-shacman-sx1256nv504c-6h4/", "/product/bortovoj-gruzovik-shacman-sx1256nv504c-6x4/");
   handRedirect("/shop/f3000/zernovoz-shacman-sx1256dr-6h4/", "/product/zernovoz-shacman-sx1256dr-6h4/");
   handRedirect("/shop/f3000/zernovoz-shacman-sx3258dr384-6h4/", "/product/zernovoz-shacman-sx3258dr384-6h4/");

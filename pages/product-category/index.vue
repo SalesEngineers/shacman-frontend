@@ -2,7 +2,7 @@
     <div>
         <v-container class="content-padding">
             <h1 class="mb-md-14 mb-9">
-                Каталог
+                Каталог спецтехники Shacman
             </h1>
             <!-- <Banner class="block-padding"/> -->
 
@@ -41,11 +41,11 @@ export default {
     },
     head () {
         return {
-        title: 'Каталог спецтехники от представителя компании',
+        title: 'Каталог китайской спецтехники Shacman (Шакман) по выгодным ценам',
         meta: [
             { charset: 'utf-8' },
-            { hid: 'description', name: 'description', content: 'Каталог техники XCMG: в наличии фронтальные погрузчики, автокраны, бульдозеры, гусеничные краны и другие виды техники. Доставка по всей РФ.' },
-            { hid: 'keywords', name: 'keywords', content: '' }
+            { hid: 'description', name: 'description', content: 'Продажа китайской спецтехники Shacman (Шакман) от официального дилера по России: в наличии самосвалы, грузовая техника, седельные тягачи, автобетоносмесители.' },
+            { hid: 'keywords', name: 'keywords', content: 'каталог спецтехники shacman, шакман, шахман, продажа, купить, цена' }
         ]
         }
     },

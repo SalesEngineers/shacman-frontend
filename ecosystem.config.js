@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'XCMG',
+      name: 'shacman',
       exec_mode: 'cluster',
       cron_restart: '0 0 * * *',
       //host: '188.225.44.134',

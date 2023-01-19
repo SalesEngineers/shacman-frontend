@@ -39,11 +39,11 @@ export default {
     },
     head () {
         return {
-        title: 'Запчасти на спецтехнику XCMG - купить у официального дилера',
+        title: 'Запчасти на спецтехнику Shacman - купить у официального дилера',
         meta: [
             { charset: 'utf-8' },
-            { hid: 'description', name: 'description', content: 'Продажа запчастей на китайскую технику XCMG по всей РФ от официального дилера.'},
-            { hid: 'keywords', name: 'keywords', content: ''}
+            { hid: 'description', name: 'description', content: 'Продажа запчастей на китайскую технику Shacman по всей РФ от официального дилера.'},
+            { hid: 'keywords', name: 'keywords', content: 'запчасти на спецтехнику shacman, шакман, шахман, запасные части'}
         ]
         }
     },
