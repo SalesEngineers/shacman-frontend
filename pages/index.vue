@@ -4,9 +4,7 @@
             link="/product-category/"
             btnTitle="Перейти в каталог"
             title="Официальный&nbsp;дилер  спецтехники Shacman в&nbsp;России"
-            :slides="[
-                '/img/main-window/xcmg-slider-general.jpg'
-            ]"
+            :slides="['/img/main-window/xcmg-slider-general.jpg']"
         />
         <v-container class="content-padding">
             <v-row align="center" class="block-padding">
@@ -174,7 +172,12 @@ export default {
                     content:
                         "Продажа китайских грузовых автомобилей Shacman Shaanxi от официального дилера с доставкой по всей РФ ➤ Лизинг от 5% ✓ Все машины проходят ТО ✓ Прямые поставки техники.",
                 },
-                { hid: "keywords", name: "keywords", content: "официальный дилер shacman, шакман, шахман, продажа, купить, цена" },
+                {
+                    hid: "keywords",
+                    name: "keywords",
+                    content:
+                        "официальный дилер shacman, шакман, шахман, продажа, купить, цена",
+                },
             ],
         };
     },
@@ -191,15 +194,18 @@ export default {
         this.$store.commit("setBreadCrumbs", null);
     },
     watch: {
-        categories() {
-            this.catalogSpec = [];
-            this.getCategories();
+        categories: {
+            handler() {
+                this.catalogSpec = [];
+                this.getCategories();
+            },
+            immediate: true,
         },
     },
     methods: {
         getCategories() {
             this.categories.forEach((element) => {
-                if (element.id == 2) {
+                if (element.id == 26) {
                     element.children.forEach((category) => {
                         this.catalogSpec.push(category);
                     });
