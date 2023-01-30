@@ -64,4 +64,4 @@ Allow: /wp-*.gif
 Allow: /wp-*.svg
 Allow: /wp-*.pdf
 
-Sitemap: https://xcmg-rf.ru/sitemap.xml
+Sitemap: https://shacman-rf.ru/sitemap.xml
