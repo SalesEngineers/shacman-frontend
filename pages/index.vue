@@ -206,9 +206,7 @@ export default {
         getCategories() {
             this.categories.forEach((element) => {
                 if (element.id == 26) {
-                    element.children.forEach((category) => {
-                        this.catalogSpec.push(category);
-                    });
+                    this.catalogSpec = Array.isArray(element.children) ? [...element.children] : [];
                 }
             });
         },
