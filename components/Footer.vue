@@ -7,7 +7,7 @@
                         <v-col class="pa-3" cols="12" sm="6" md="6">
                             <div class="footer-info">
                                 <client-only>
-                                    <div class="footer-contact_block">
+                                    <div v-if="dynamicContact" class="footer-contact_block">
                                         <nuxt-link
                                             to="/"
                                             style="line-height: 1"
@@ -20,31 +20,31 @@
                                         </nuxt-link>
                                         <span
                                             class="footer-title d-block pb-5"
-                                            v-if="settings.phone"
+                                            v-if="dynamicContact.phone"
                                         >
-                                            <a :href="settings.phone.href">{{
-                                                settings.phone.name
+                                            <a :href="dynamicContact.phone.href">{{
+                                                dynamicContact.phone.name
                                             }}</a>
                                         </span>
                                         <span
                                             class="footer-title d-block pb-5"
-                                            v-if="settings.email"
+                                            v-if="dynamicContact.email"
                                         >
-                                            <a :href="settings.email.href">{{
-                                                settings.email.name
+                                            <a :href="dynamicContact.email.href">{{
+                                                dynamicContact.email.name
                                             }}</a>
                                         </span>
                                         <span
                                             class="footer-title d-block pb-5"
-                                            v-if="settings.address"
-                                            v-html="settings.address"
+                                            v-if="dynamicContact.address"
+                                            v-html="dynamicContact.address"
                                         >
                                         </span>
                                         <span
                                             class="footer-title d-block pb-5"
                                             v-if="
-                                                settings.operating_mode &&
-                                                settings.operating_mode
+                                                dynamicContact.operating_mode &&
+                                                dynamicContact.operating_mode
                                                     .length != 0
                                             "
                                         >
@@ -52,7 +52,7 @@
                                                 class="ma-0"
                                                 v-for="(
                                                     item, index
-                                                ) in settings.operating_mode"
+                                                ) in dynamicContact.operating_mode"
                                                 :key="index"
                                             >
                                                 <span>{{ item.name }}</span
@@ -310,7 +310,8 @@ export default {
     computed: {
         ...mapGetters({
             categories: "getCategories", 
-            settings: "getSettings"
+            settings: "getSettings",
+            dynamicContact: "getDynamicContact"
         }),
     },
     watch: {

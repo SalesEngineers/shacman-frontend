@@ -74,7 +74,7 @@
                             />
                         </svg>
                         <svg-map
-                            city-slug="krasnoyarsk"
+                            :city-slug="dynamicContact.slug"
                             :contacts="contacts"
                         ></svg-map>
                     </div>
@@ -215,6 +215,7 @@ export default {
         ...mapState(["categories"]),
         ...mapGetters({
             contacts: "getContacts",
+            dynamicContact: "getDynamicContact"
         }),
     },
 };

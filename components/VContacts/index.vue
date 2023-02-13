@@ -171,7 +171,8 @@ export default {
 
     computed: {
         ...mapGetters({
-            contacts: "getContacts"
+            contacts: "getContacts",
+            dynamicContact: "getDynamicContact"
         }),
     },
 
@@ -179,7 +180,7 @@ export default {
         contacts: {
             handler(newCity, oldCity) {
                 if (!oldCity && newCity?.length > 0) {
-                    this.setCurrentCity(newCity[0]);
+                    this.setCurrentCity(this.dynamicContact);
                 }
             },
             immediate: true

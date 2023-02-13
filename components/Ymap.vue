@@ -50,42 +50,13 @@
 <script>
 import { mapState } from 'vuex'
 export default {
-    data() {
-        return {
-            coords: null,
-        }
-    },
     computed: {
         ...mapState([
-            'contacts',
             'addressMap'
         ]),
-    },
-    watch: {
-        addressMap() {
-            if(this.addressMap) {
-                if(this.addressMap.map.coords.indexOf('null') == -1) {
-                    this.coords = JSON.parse(this.addressMap.map.coords)
-                }
-            }
-        },
-        contacts() {
-            if(this.contacts && this.contacts.length !=0) {
-                this.$store.commit('setAddress', this.contacts[0])
-            }
+        coords() {
+            return this.addressMap?.map?.coords ? JSON.parse(this.addressMap.map.coords) : null
         }
-    },
-    mounted() {
-        if(this.addressMap) {
-            if(this.addressMap.map.coords.indexOf('null') == -1) {
-                this.coords = JSON.parse(this.addressMap.map.coords)
-            }
-        }
-    },
-    methods: {
-        // onClick(e) {
-        //     this.coords = e.get('coords');
-        // },
     },
 }
 </script>

@@ -68,32 +68,32 @@
         <header>
             <div class="upper-header">
                 <div class="container">
-                    <div class="upper-header-content">
+                    <div v-if="dynamicContact" class="upper-header-content">
                         <span class="d-none d-sm-block">
                             Официальный дилер Shacman
                         </span>
                         <client-only>
-                            <span v-if="settings.email">
+                            <span v-if="dynamicContact.email">
                                 <a
                                     class="d-block d-sm-none"
-                                    :href="settings.email.href"
-                                    >{{ settings.email.name }}</a
+                                    :href="dynamicContact.email.href"
+                                    >{{ dynamicContact.email.name }}</a
                                 >
                             </span>
                             <div>
                                 <span
                                     class="d-none d-sm-inline"
-                                    v-if="settings.email"
+                                    v-if="dynamicContact.email"
                                 >
-                                    <a :href="settings.email.href">{{
-                                        settings.email.name
+                                    <a :href="dynamicContact.email.href">{{
+                                        dynamicContact.email.name
                                     }}</a>
                                 </span>
-                                <span v-if="settings.phone">
+                                <span v-if="dynamicContact.phone">
                                     <a
                                         class="pl-14"
-                                        :href="settings.phone.href"
-                                        >{{ settings.phone.name }}</a
+                                        :href="dynamicContact.phone.href"
+                                        >{{ dynamicContact.phone.name }}</a
                                     >
                                 </span>
                             </div>
@@ -446,6 +446,7 @@ export default {
             displayBreadcrumbs: "getBreadcrumbs",
             categories: "getCategories",
             settings: "getSettings",
+            dynamicContact: "getDynamicContact"
         }),
     },
     watch: {

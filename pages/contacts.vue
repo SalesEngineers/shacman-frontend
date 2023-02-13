@@ -29,6 +29,19 @@ import Ymap from '~/components/Ymap.vue'
 import { mapState } from 'vuex'
 
 export default {
+    async asyncData({ store }) {
+        let contact = store.getters["getDynamicContact"];
+        
+        if (!contact) {
+            const contacts = store.getters["getContacts"];
+
+            if (contacts.lenght) {
+                contact = contacts[0];
+            }
+        }
+
+        await store.dispatch("setAddress", contact);
+    },
     components: {
         ContactCardsList,
         Ymap

@@ -14,13 +14,21 @@ export const state = () => ({
     text: "",
     btnName: "",
   },
+  dynamicContact: null,
 });
 
 export const actions = {
-  async nuxtServerInit({ dispatch }) {
+  async nuxtServerInit({ dispatch }, { req }) {
+    const headers = req && req.headers ? Object.assign({}, req.headers) : {};
+    const ip =
+      headers["x-real-ip"] ||
+      req.connection.remoteAddress ||
+      req.socket.remoteAddress;
+
     try {
       await dispatch("loadSettings");
       await dispatch("loadCategories");
+      await dispatch("loadDynamicContact", ip);
       await dispatch("loadContacts");
     } catch (e) {
       console.log(e);
@@ -59,6 +67,20 @@ export const actions = {
         commit("setArticles", articles);
       });
   },
+  async loadDynamicContact({ commit }, ip) {
+    await axios
+      .get(`https://api.shacman-rf.ru/api/contacts/dynamic`, { params: { ip } })
+      .then((r) => r.data.data)
+      .then((contact) => {
+        commit("setDynamicContact", contact);
+      })
+      .catch((e) => {
+        commit("setDynamicContact", null);
+      });
+  },
+  async setAddress({ commit }, contact) {
+    await commit("setAddress", contact);
+  },
 };
 
 export const mutations = {
@@ -85,6 +107,9 @@ export const mutations = {
   },
   setArticles(state, articles) {
     state.articles = articles || [];
+  },
+  setDynamicContact(state, contact) {
+    state.dynamicContact = contact;
   },
   onModalWindow(
     state,
@@ -132,5 +157,8 @@ export const getters = {
   },
   getSettings(state) {
     return state.settings;
-  }
+  },
+  getDynamicContact(state) {
+    return state.dynamicContact;
+  },
 };
