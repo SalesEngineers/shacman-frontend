@@ -169,8 +169,7 @@
             </div>
             
 
-            <script type="application/javascript" v-if="product.script" v-html="product.script">
-            </script>
+            <div style="display: none;" v-if="product.script" v-html="product.script"></div>
 
 
             <div class="download-block block-padding" v-if="product.attachments && product.attachments.length != 0">

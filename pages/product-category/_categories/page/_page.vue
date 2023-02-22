@@ -69,9 +69,6 @@
 
             <CategoryInfo v-if="category.id == 3"/>
 
-            <div class="block-padding column-content category-content" v-if="category.content" v-html="category.content">
-            </div>
-
             <Feedback/>
             
             <v-contacts></v-contacts>
