@@ -30,6 +30,7 @@ export const actions = {
       await dispatch("loadCategories");
       await dispatch("loadDynamicContact", ip);
       await dispatch("loadContacts");
+      await dispatch("loadArticles");
     } catch (e) {
       console.log(e);
     }

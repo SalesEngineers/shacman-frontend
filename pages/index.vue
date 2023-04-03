@@ -125,7 +125,7 @@
                 </v-col>
             </v-row>
 
-            <!-- <BlogList :isMain="true"/> -->
+            <BlogList :isMain="true"/>
 
             <v-contacts></v-contacts>
         </v-container>

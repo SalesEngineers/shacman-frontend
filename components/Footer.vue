@@ -227,9 +227,9 @@
                                             >Лизинг</nuxt-link
                                         >
                                     </span>
-                                    <!-- <span class="pb-5 footer-title font-weight-bold text-uppercase d-block">
+                                    <span class="pb-5 footer-title font-weight-bold text-uppercase d-block">
                                         <nuxt-link to="/blog/">Блог</nuxt-link>
-                                    </span> -->
+                                    </span>
                                 </div>
                                 <div class="footer-bottom_block pb-5 pb-md-0">
                                     <client-only>

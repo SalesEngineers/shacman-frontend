@@ -148,7 +148,7 @@
                                 to="/about/"
                                 >О компании</nuxt-link
                             >
-                            <!-- <nuxt-link @click.native="expand = false" class="pl-xl-15 pl-7" to="/blog/">Блог</nuxt-link> -->
+                            <nuxt-link @click.native="expand = false" class="pl-xl-15 pl-7" to="/blog/">Блог</nuxt-link>
                             <nuxt-link
                                 @click.native="expand = false"
                                 class="pl-xl-15 pl-7"
