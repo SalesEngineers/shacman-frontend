@@ -24,7 +24,7 @@
                                         >
                                             <v-card class="video-wrapper">
                                                 <v-icon class="btn-close" color="primary" @click="showYouTube = false">mdi-plus</v-icon>
-                                                <iframe class="iframe-video" :src="product.video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                <iframe class="iframe-video" :src="videoYoutube" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                             </v-card>
                                         </v-dialog>
                                     </div>     
@@ -260,6 +260,8 @@ import Services from '~/components/Services.vue'
 import CatalogNaves from '~/components/Catalog_navesnoe_list.vue'
 import Feedback from '~/components/Feedback.vue'
 
+const YOUTUBE_REG = /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/i;
+
 export default {
     components: {
         VContacts,
@@ -280,6 +282,19 @@ export default {
             mainImgAlt: '',
             mainImgTitle: '',
             activeSlide: 0,
+        }
+    },
+    computed: {
+        videoYoutube() {
+            if (!this.product.video) return null;
+
+            const video = this.product?.video.match(YOUTUBE_REG);
+            
+            if (video[1]) {
+                return `https://www.youtube.com/embed/${video[1]}`;
+            }
+
+            return null;
         }
     },
     head () {
