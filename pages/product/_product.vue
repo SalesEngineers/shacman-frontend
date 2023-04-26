@@ -64,7 +64,7 @@
                             <div class="product-links test-drive-link__wrapeer">
                                 <v-btn height="44px" color="primary" class="big-main-text modal-window_button text-none font-weight-bold" @click="$store.commit('onModalWindow', {title: 'Узнать цену', btnName: 'Узнать цену', text: '<strong>' + product.name + '</strong>'})">Узнать цену</v-btn>
 
-                                <span class="sub-primary-text href-primary underline-href font-weight-bold" @click="$store.commit('onModalWindow', {title: 'Записаться на тест-драйв', btnName: 'Записаться'})">Записаться на тест-драйв</span>
+                                <!-- <span class="sub-primary-text href-primary underline-href font-weight-bold" @click="$store.commit('onModalWindow', {title: 'Записаться на тест-драйв', btnName: 'Записаться'})">Записаться на тест-драйв</span> -->
                                 
                             </div>
                         </div>
