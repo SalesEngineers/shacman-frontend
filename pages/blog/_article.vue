@@ -73,7 +73,7 @@ export default {
             },
             {
             text: this.article.name,
-            disabled: false,
+            disabled: true,
             href: this.article.url + '/',
             position: 3,
             },
