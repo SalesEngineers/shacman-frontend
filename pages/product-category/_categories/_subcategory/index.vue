@@ -65,9 +65,6 @@
             </div>
             
             <Feedback/>
-            <h2 class="text-uppercase mb-md-14 mb-9">
-                Контакты
-            </h2>
             
             <v-contacts></v-contacts>
 
