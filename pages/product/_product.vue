@@ -215,16 +215,16 @@
                 Оплата и доставка
                 </h2>
                 <v-row>
-                    <v-col cols="12" md="6">
-                        <v-card class="shadow-text-card">
-                        <p class="card-title primary-text text-uppercase">Оплата</p>
-                        <p>Доставка возможна эвакуатором, фурой, ЖД&nbsp;транспортом. Служба доставки может осуществлять разборку спецтехники, погрузку, увязку, доставку, разгрузку, сборку, ТО на&nbsp;месте эксплуатации &nbsp;передачу покупателю. Ответственность за&nbsp;время всех работ и&nbsp;доставки несет компания.</p>
-                        </v-card>
-                    </v-col>
                     <v-col cols="12" md="3">
                         <v-card class="shadow-text-card">
-                        <p class="card-title primary-text text-uppercase">Доставка</p>
+                        <p class="card-title primary-text text-uppercase">Оплата</p>
                         <p>Безналичная форма оплаты для юр.&nbsp;лиц, наличная форма оплаты, оплата банковскими картами, НДС.</p>
+                        </v-card>
+                    </v-col>
+                    <v-col cols="12" md="6">
+                        <v-card class="shadow-text-card">
+                        <p class="card-title primary-text text-uppercase">Доставка</p>
+                        <p>Доставка возможна эвакуатором, фурой, ЖД&nbsp;транспортом. Служба доставки может осуществлять разборку спецтехники, погрузку, увязку, доставку, разгрузку, сборку, ТО на&nbsp;месте эксплуатации &nbsp;передачу покупателю. Ответственность за&nbsp;время всех работ и&nbsp;доставки несет компания.</p>
                         </v-card>
                     </v-col>
                     <v-col cols="12" md="3">
