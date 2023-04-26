@@ -1,10 +1,17 @@
 <template>
     <div>
         <MainWindow
-            link="/product-category/"
-            btnTitle="Перейти в каталог"
-            title="Официальный&nbsp;дилер  спецтехники Shacman в&nbsp;России"
-            :slides="['/img/main-window/xcmg-slider-general.jpg']"
+            :slides="[{
+                title: 'Новый Shacman X6000 уже в продаже',
+                link: '/product-category/x6000/',
+                btnTitle: 'Перейти в каталог',
+                image: '/img/main-window/slide-1.webp'
+            },{
+                title: 'Официальный&nbsp;дилер  спецтехники Shacman в&nbsp;России',
+                link: '/product-category/',
+                btnTitle: 'Перейти в каталог',
+                image: '/img/main-window/xcmg-slider-general.webp'
+            }]"
         />
         <v-container class="content-padding">
             <v-row align="center" class="block-padding">
