@@ -153,11 +153,8 @@
                     </v-row>
                 </div>
 
-                <h2 class="text-uppercase mb-md-14 mb-9">
-                    Контакты
-                </h2>
+                <v-contacts></v-contacts>
             </v-container>
-            <Ymap/>
         </div>
         <FeedbackMan title="Оставьте заявку на сервисное обслуживание" content="Квалифицированный менеджер поможет с выбором услуги  и ответит на любой вопрос" btnTitle="Подобрать технику"/>
    </div>
@@ -165,7 +162,6 @@
 
 <script>
 import MainWindow from '~/components/Main_window.vue'
-import Ymap from '~/components/Ymap.vue'
 import FeedbackMan from '~/components/Feedback_man.vue'
 import Catalog from '~/components/Catalog_cards_list.vue'
 import VContacts from '~/components/VContacts/index.vue'
@@ -176,7 +172,6 @@ export default {
       MainWindow,
       FeedbackMan,
       Catalog,
-      Ymap,
       VContacts
     },    
     head () {

@@ -9,7 +9,7 @@
             "
         >
             <h2 class="text-uppercase">Контакты</h2>
-            <div>
+            <div v-if="showLink">
                 <nuxt-link
                     class="font-weight-bold underline-href contacts-link"
                     to="/contacts/"
@@ -159,6 +159,13 @@ import { mapGetters } from "vuex";
 export default {
     components: {
         VContactsMap,
+    },
+
+    props: {
+        showLink: {
+            type: Boolean,
+            default: true
+        }
     },
 
     data() {

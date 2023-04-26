@@ -1,12 +1,8 @@
 <template>
     <div class="content-padding">
-        <v-container>
-            <h1 class="text-uppercase mb-md-14 mb-9">
-                Контакты
-            </h1>
-            <ContactCardsList/>
+        <v-container class="content-padding">
+            <v-contacts :show-link="false"></v-contacts>
         </v-container>
-        <Ymap/>
         <v-container>
             <h2 class="mb-md-14 mb-9 text-uppercase">
                 Реквизиты
@@ -24,8 +20,7 @@
 </template>
 
 <script>
-import ContactCardsList from '~/components/Contact_cards_list.vue'
-import Ymap from '~/components/Ymap.vue'
+import VContacts from '~/components/VContacts/index.vue'
 import { mapState } from 'vuex'
 
 export default {
@@ -43,8 +38,7 @@ export default {
         await store.dispatch("setAddress", contact);
     },
     components: {
-        ContactCardsList,
-        Ymap
+        VContacts
     },
     head () {
         return {
