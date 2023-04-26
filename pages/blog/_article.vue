@@ -17,12 +17,17 @@
                     <p class="card-title mb-5">Читайте также</p>
                     <v-row class="articles-block">
                         <v-col cols="12" sm="6" md="12" v-for="item, index in twoArticles" :key="index">
-                            <v-card :class="index == 0 ? 'background-card' : 'card'">
-                                <img :src="index == 0 ? item.image_vertical.url : item.image_horizontal.url" :alt="index == 0 ? item.image_vertical.alt : item.image_horizontal.alt" :title="index == 0 ? item.image_vertical.title : item.image_horizontal.title">
+                            <v-card class="card">
+                                <v-img 
+                                    :src="item.image_horizontal.url" 
+                                    :alt="item.image_horizontal.alt" 
+                                    :title="item.image_horizontal.title"
+                                    cover
+                                ></v-img>
                                 <div class="content-card">
-                                <p class="font-weight-bold">{{ item.name }}</p>
-                                <p>{{ item.published_at | formatDate }}</p>
-                                <nuxt-link class="big-main-text underline-href text-none font-weight-bold" :to="`/blog/${item.url}/`">Читать полностью</nuxt-link>
+                                    <p class="font-weight-bold">{{ item.name }}</p>
+                                    <p>{{ item.published_at | formatDate }}</p>
+                                    <nuxt-link class="big-main-text underline-href text-none font-weight-bold" :to="`/blog/${item.url}/`">Читать полностью</nuxt-link>
                                 </div>
                             </v-card>
                         </v-col>
