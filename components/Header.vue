@@ -332,36 +332,43 @@
                     ]"
                     class="header-breadcrumbs container pt-9 pt-lg-11"
                 >
-                    <v-breadcrumbs
+                <v-breadcrumbs
                         itemscope
-                        itemtype="http://schema.org/BreadcrumbList"
+                        itemtype="https://schema.org/BreadcrumbList"
                         class="pa-0"
                         :items="displayBreadcrumbs"
                     >
                         <template v-slot:item="{ item }">
                             <li
                                 itemprop="itemListElement"
-                                itemscope
-                                itemtype="http://schema.org/ListItem"
+                                itemtype="https://schema.org/ListItem"
+                                itemscope=""
                             >
-                                <nuxt-link
-                                    v-if="!item.disabled"
-                                    :to="item.href"
-                                    >{{ item.text }}</nuxt-link
-                                >
-                                <span
-                                    :class="
-                                        visabilityHeader
-                                            ? 'disabled-breadcrumb-black'
-                                            : 'disabled-breadcrumb-white'
-                                    "
-                                    v-else
-                                    >{{ item.text }}</span
-                                >
-                                <meta
-                                    itemprop="position"
-                                    :content="item.position"
-                                />
+                                <template v-if="!item.disabled">
+                                    <nuxt-link :to="item.href" itemprop="item">
+                                        <span itemprop="name">{{
+                                            item.text
+                                        }}</span>
+                                    </nuxt-link>
+                                    <meta
+                                        itemprop="position"
+                                        :content="item.position"
+                                    />
+                                </template>
+                                <template v-else>
+                                    <span
+                                        :class="
+                                            visabilityHeader
+                                                ? 'disabled-breadcrumb-black'
+                                                : 'disabled-breadcrumb-white'
+                                        "
+                                        >{{ item.text }}</span
+                                    >
+                                    <meta
+                                        itemprop="position"
+                                        :content="item.position"
+                                    />
+                                </template>
                             </li>
                         </template>
                     </v-breadcrumbs>
