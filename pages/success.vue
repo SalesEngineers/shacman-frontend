@@ -16,7 +16,7 @@
                     </div>
                 </v-col>
                 <v-col cols="12" sm="6" md="4" lg="6">
-                    <iframe class="mb-lg-8 iframe-video" src="https://www.youtube.com/embed/nXxkJjPk790?autoplay=1&amp;mute=1" title="YouTube video player"
+                    <iframe loading="lazy" class="mb-lg-8 iframe-video" src="https://www.youtube.com/embed/nXxkJjPk790?autoplay=1&amp;mute=1" title="YouTube video player"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen="">
@@ -24,28 +24,28 @@
                 </v-col>
 
                 <v-col cols="12" sm="6" md="4" lg="3">
-                    <iframe class="iframe-video-little" src="https://www.youtube.com/embed/45jjEuRAKPM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe loading="lazy" class="iframe-video-little" src="https://www.youtube.com/embed/45jjEuRAKPM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </v-col>
                 <v-col cols="12" sm="6" md="4" lg="3">
-                    <iframe class="iframe-video-little" src="https://www.youtube.com/embed/lgRXoGtrLoE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe loading="lazy" class="iframe-video-little" src="https://www.youtube.com/embed/lgRXoGtrLoE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </v-col>
                 <v-col cols="12" sm="6" md="4" lg="3">
-                    <iframe class="iframe-video-little" src="https://www.youtube.com/embed/Ige7T5fgMpw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe loading="lazy" class="iframe-video-little" src="https://www.youtube.com/embed/Ige7T5fgMpw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </v-col>
                 <v-col cols="12" sm="6" md="4" lg="3">
-                    <iframe class="iframe-video-little" src="https://www.youtube.com/embed/s89Lol_6woo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe loading="lazy" class="iframe-video-little" src="https://www.youtube.com/embed/s89Lol_6woo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </v-col>
                 <v-col cols="12" sm="6" md="4" lg="3">
-                    <iframe class="iframe-video-little" src="https://www.youtube.com/embed/n5j3lw3R9sg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe loading="lazy" class="iframe-video-little" src="https://www.youtube.com/embed/n5j3lw3R9sg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </v-col>
                 <v-col cols="12" sm="6" md="4" lg="3">
-                    <iframe class="iframe-video-little" src="https://www.youtube.com/embed/mLCEivr8uIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe loading="lazy" class="iframe-video-little" src="https://www.youtube.com/embed/mLCEivr8uIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </v-col>
                 <v-col cols="12" sm="6" md="4" lg="3">
-                    <iframe class="iframe-video-little" src="https://www.youtube.com/embed/_dMr5m9PuKw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe loading="lazy" class="iframe-video-little" src="https://www.youtube.com/embed/_dMr5m9PuKw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </v-col>
                 <v-col cols="12" sm="6" md="4" lg="3">
-                    <iframe class="iframe-video-little" src="https://www.youtube.com/embed/-un3grzEJ7Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe loading="lazy" class="iframe-video-little" src="https://www.youtube.com/embed/-un3grzEJ7Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </v-col>
             </v-row>
 
