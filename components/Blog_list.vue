@@ -22,19 +22,10 @@
                     <v-col
                         v-for="(item, index) in mainArticles"
                         :key="index"
-                        :class="[
-                            index == 6 ? (index = 0) : '',
-                            index == 0 || index == 4
-                                ? 'col-sm-6 col-md-6 col-12'
-                                : 'col-sm-6 col-md-3 col-12',
-                        ]"
+                        class="col-sm-6 col-md-4 col-12"
                     >
                         <v-card
-                            :class="
-                                index == 1 || index == 4 || index == 5
-                                    ? 'background-card'
-                                    : 'card'
-                            "
+                            class="card"
                         >
                             <img
                                 :src="
@@ -195,11 +186,6 @@ export default {
         object-fit: cover;
         position: absolute;
         border-radius: inherit;
-    }
-}
-@include sm {
-    .v-card {
-        height: 400px;
     }
 }
 </style>
