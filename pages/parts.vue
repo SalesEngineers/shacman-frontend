@@ -1,6 +1,6 @@
 <template>
     <div>
-        <MainWindow title="Оригинальные запчасти для спецтехники Shacman  " :slides="['/img/parts/slide-1.jpg']"/>
+        <MainWindow :slides="[{image: '/img/parts/slide-1.jpg', title: 'Оригинальные запчасти для спецтехники Shacman', btnTitle: '', link: ''}]"/>
         <v-container class="content-padding">
             <v-row align="center" class="block-padding">
                 <v-col cols="12" lg="6">

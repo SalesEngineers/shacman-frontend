@@ -38,13 +38,13 @@
         <v-container class="main-window-content_wrap">
             <v-row class="main-window_content">
                 <v-col lg="8">
-                    <h1 class="pb-10 pb-sm-15 pt-16" v-html="currentSlide.title"></h1>
-                    <nuxt-link :to="currentSlide.link" v-if="currentSlide.link != ''">
+                    <h1 class="pb-10 pb-sm-15 pt-16" v-html="currentSlide.title || title"></h1>
+                    <nuxt-link :to="currentSlide.link" v-if="currentSlide?.link">
                         <v-btn
                             class="main-window_button text-none font-weight-bold"
                             color="primary"
                         >
-                            {{ currentSlide.btnTitle }}
+                            {{ currentSlide.btnTitle || btnTitle }}
                         </v-btn>
                     </nuxt-link>
                     <v-btn
@@ -53,12 +53,12 @@
                         color="primary"
                         @click="
                             $store.commit('onModalWindow', {
-                                title: currentSlide.btnTitle,
-                                btnName: currentSlide.btnTitle,
+                                title: currentSlide.btnTitle || btnTitle,
+                                btnName: currentSlide.btnTitle || title,
                             })
                         "
                     >
-                        {{ currentSlide.btnTitle }}
+                        {{ currentSlide.btnTitle || btnTitle }}
                     </v-btn>
                 </v-col>
             </v-row>

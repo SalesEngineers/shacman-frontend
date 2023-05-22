@@ -1,6 +1,6 @@
 <template>
   <div>
-    <MainWindow btnTitle="Получить консультацию" title="Лизинг спецтехники Shacman" :slides="['/img/lizing/slide-1.jpg']"/>
+    <MainWindow :slides="[{image: '/img/lizing/slide-1.jpg', title: 'Лизинг спецтехники Shacman', btnTitle: 'Получить консультацию', link: ''}]"/>
     <v-container class="content-padding">
         <v-row align="center" class="block-padding mt-0">
             <v-col cols="12" lg="6">
