@@ -65,6 +65,10 @@
             </div>
 
             <Feedback/>
+
+            <div v-if="subcategory.video" class="block-padding">
+                <iframe loading="lazy" class="iframe-video" :src="subcategory.video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
             
             <v-contacts></v-contacts>
 

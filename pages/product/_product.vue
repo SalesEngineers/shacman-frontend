@@ -12,22 +12,7 @@
                                 <div class="photo-box">
                                     <img :src="mainImgUrl" :alt="mainImgAlt" :title="mainImgTitle"/>
                                 </div>
-                                <div class="thumbs" v-if="product.video || product.images.length != 0">
-                                    <div v-if="product.video">
-                                        <svg @click="showYouTube = true" width="70" height="70" viewBox="0 0 78 78" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="39" cy="39" r="35" fill="#0154A6"/>
-                                        <path d="M53 39.5L32.75 27.8087V51.1913L53 39.5Z" fill="white"/>
-                                        </svg>
-                                        <v-dialog
-                                            v-model="showYouTube"
-                                            max-width="900px"
-                                        >
-                                            <v-card class="video-wrapper">
-                                                <v-icon class="btn-close" color="primary" @click="showYouTube = false">mdi-plus</v-icon>
-                                                <iframe class="iframe-video" :src="videoYoutube" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                            </v-card>
-                                        </v-dialog>
-                                    </div>     
+                                <div class="thumbs" v-if="product.images.length != 0">                                       
                                     <template v-if="product.images.length != 0">                              
                                         <img @click="changeMainPhoto(item, index)" v-for="item, index in product.images" :class="activeSlide == index ? 'active-slide' : ''" :key="index" :src="item.url" :alt="item.alt" :title="item.title"/>
                                     </template>
@@ -208,6 +193,23 @@
                         </v-col>
                     </template>
                 </v-row>
+            </div>
+
+            <div v-if="product.video" class="block-padding">
+                <iframe loading="lazy" class="mb-lg-8 iframe-video" :src="videoYoutube" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <!--<svg @click="showYouTube = true" width="70" height="70" viewBox="0 0 78 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="39" cy="39" r="35" fill="#0154A6"/>
+                    <path d="M53 39.5L32.75 27.8087V51.1913L53 39.5Z" fill="white"/>
+                    </svg>
+                    <v-dialog
+                        v-model="showYouTube"
+                        max-width="900px"
+                    >
+                        <v-card class="video-wrapper">
+                            <v-icon class="btn-close" color="primary" @click="showYouTube = false">mdi-plus</v-icon>
+                            <iframe class="iframe-video" :src="videoYoutube" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </v-card>
+                </v-dialog>-->
             </div>
 
             <div class="block-padding">

@@ -63,6 +63,10 @@
                 </v-col>
             </v-row>
 
+            <div v-if="settings.video" class="block-padding">
+                <iframe loading="lazy" class="iframe-video" :src="settings.video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
             <div class="certificates-block block-padding">
                 <h2 class="text-uppercase mb-md-14 mb-9">Сертификаты</h2>
                 <v-row>
@@ -97,6 +101,7 @@ import VContacts from "~/components/VContacts/index.vue";
 import Feedback from "~/components/Feedback.vue";
 import CollageMain from "~/components/collage/Collage_about_main.vue";
 import CollageSecond from "~/components/collage/Collage_about_second.vue";
+import { mapState } from 'vuex'
 
 export default {
     components: {
@@ -119,6 +124,11 @@ export default {
                 { hid: "keywords", name: "keywords", content: "о компании" },
             ],
         };
+    },
+    computed: {
+        ...mapState([
+            'settings'
+        ])
     },
     data() {
         return {
@@ -186,5 +196,11 @@ export default {
     .history-block .v-tab {
         font-size: 14px;
     }
+}
+.iframe-video {
+  width: 100%;
+  height: 50vw;
+  max-height: 400px;
+  display: block;
 }
 </style>

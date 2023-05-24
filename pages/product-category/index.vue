@@ -18,6 +18,10 @@
                 </h2>
                 <Catalog :items="catalogNaves"/>
             </div>
+
+            <div v-if="settings.video" class="block-padding">
+                <iframe loading="lazy" class="iframe-video" :src="settings.video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
             
             <v-contacts></v-contacts>
         </v-container>
@@ -79,6 +83,7 @@ export default {
     computed: {
         ...mapState([
             'categories',
+            'settings'
         ])
     },
     watch: {
@@ -106,6 +111,11 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+.iframe-video {
+    width: 100%;
+    height: 30vw;
+    max-height: 340px;
+    display: block;
+}
 </style>

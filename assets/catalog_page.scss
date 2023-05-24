@@ -14,6 +14,12 @@
         box-shadow: unset !important;
     } 
 }
+.iframe-video {
+    width: 100%;
+    height: 30vw;
+    max-height: 340px;
+    display: block;
+}
 @include xs{
     .content-padding {
         padding-top: 90px;
