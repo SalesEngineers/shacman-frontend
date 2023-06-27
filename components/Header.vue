@@ -69,9 +69,9 @@
             <div class="upper-header">
                 <div class="container">
                     <div v-if="dynamicContact" class="upper-header-content">
-                        <span class="d-none d-sm-block">
-                            Официальный дилер Shacman
-                        </span>
+                        <h1 class="d-none d-sm-block company-name">
+                            Официальный дилер Shacman в России
+                        </h1>
                         <client-only>
                             <span v-if="dynamicContact.email">
                                 <a
@@ -498,6 +498,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.company-name {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: normal;
+    font-family: "Gilroy", sans-serif;
+    line-height: 1.5;
+}
+
 header {
     z-index: 11;
     color: white;
