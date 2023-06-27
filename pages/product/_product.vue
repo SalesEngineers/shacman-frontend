@@ -196,7 +196,7 @@
             </div>
 
             <div v-if="product.video" class="block-padding">
-                <iframe loading="lazy" class="mb-lg-8 iframe-video" :src="videoYoutube" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe loading="lazy" class="iframe-video-block" :src="videoYoutube" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <!--<svg @click="showYouTube = true" width="70" height="70" viewBox="0 0 78 78" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="39" cy="39" r="35" fill="#0154A6"/>
                     <path d="M53 39.5L32.75 27.8087V51.1913L53 39.5Z" fill="white"/>
@@ -245,7 +245,7 @@
                 <CatalogNaves :items="product.equipments"/>
             </div>
 
-            <Services :images="['/img/services/car_people.png','/img/services/sklad.png','/img/services/pogruzchik.png']"/>
+            <Services :images="['/img/services/service.jpg','/img/services/parts.jpg','/img/services/lizing.jpg']"/>
 
             <Feedback/>
             
@@ -478,12 +478,6 @@ export default {
     }
     .video-wrapper {
         position: relative;
-    }
-    .iframe-video {
-        width: 100%;
-        height: 50vw;
-        max-height: 400px;
-        display: block;
     }
     .btn-close {
         position: absolute;

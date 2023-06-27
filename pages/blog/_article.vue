@@ -17,7 +17,7 @@
                         <div v-if="article.video" class="block-padding">
                             <iframe
                                 loading="lazy"
-                                class="iframe-video"
+                                class="iframe-video-block"
                                 :src="article.video"
                                 title="YouTube video player"
                                 frameborder="0"

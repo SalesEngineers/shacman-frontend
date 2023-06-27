@@ -35,7 +35,7 @@
                         </v-row>
                     </div>   
                     <div v-if="settings.video" class="pt-14">
-                        <iframe loading="lazy" class="iframe-video" :src="settings.video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe loading="lazy" class="iframe-video-block" :src="settings.video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>                  
                 </v-col>
                 <v-col cols="12" lg="6">
@@ -174,7 +174,7 @@ export default {
                 btnTitle: 'Перейти в каталог',
                 image: '/img/main-window/slide-1.webp'
             },{
-                title: 'Официальный&nbsp;дилер  спецтехники Shacman в&nbsp;России',
+                title: 'Официальный дилер спецтехники Shacman в&nbsp;России',
                 link: '/product-category/',
                 btnTitle: 'Перейти в каталог',
                 image: '/img/main-window/xcmg-slider-general.webp'
@@ -221,6 +221,11 @@ export default {
 <style lang="scss" scoped>
 .svg-map-container {
     position: relative;
+
+    svg {
+        width: 100%;
+        max-width: 376px;
+    }
 }
 .card-info {
     position: absolute;
@@ -276,11 +281,5 @@ export default {
         margin-bottom: 30px;
         padding-right: 0;
     }
-}
-.iframe-video {
-  width: 100%;
-  height: 30vw;
-  max-height: 340px;
-  display: block;
 }
 </style>

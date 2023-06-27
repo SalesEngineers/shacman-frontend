@@ -64,7 +64,7 @@
             </v-row>
 
             <div v-if="settings.video" class="block-padding">
-                <iframe loading="lazy" class="iframe-video" :src="settings.video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe loading="lazy" class="iframe-video-block" :src="settings.video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
             <div class="certificates-block block-padding">
@@ -196,11 +196,5 @@ export default {
     .history-block .v-tab {
         font-size: 14px;
     }
-}
-.iframe-video {
-  width: 100%;
-  height: 50vw;
-  max-height: 400px;
-  display: block;
 }
 </style>

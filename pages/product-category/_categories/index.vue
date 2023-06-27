@@ -74,7 +74,7 @@
             <Feedback/>
 
             <div v-if="category.video" class="block-padding">
-                <iframe loading="lazy" class="iframe-video" :src="category.video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe loading="lazy" class="iframe-video-block" :src="category.video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
            
             <v-contacts></v-contacts>

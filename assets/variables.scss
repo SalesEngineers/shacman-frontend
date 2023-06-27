@@ -85,6 +85,13 @@ h1, h2, h3 {
   z-index: 10;
 }
 
+.iframe-video-block {
+    display: block;
+    width: 50%;
+    height: 40vh;
+    max-height: 400px;
+}
+
 @include xl {
   html {
     font-size: 20px;
@@ -131,6 +138,10 @@ h1, h2, h3 {
     padding-right: 50px;
     padding-left: 50px;
   }
+
+  .iframe-video-block {
+    width: 50%;
+  }
 }
 
 @include sm {
@@ -153,6 +164,10 @@ h1, h2, h3 {
   .content-padding {
     padding-top: 75px;
     padding-bottom: 75px;
+  }
+
+  .iframe-video-block {
+    width: 100%;
   }
 }
 
