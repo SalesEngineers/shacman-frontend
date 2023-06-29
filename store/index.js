@@ -82,6 +82,10 @@ export const actions = {
   async setAddress({ commit }, contact) {
     await commit("setAddress", contact);
   },
+  async loadContact(_, slug) {
+    return await axios
+      .get(`${domain}/api/contacts/${slug}/show`)
+  }
 };
 
 export const mutations = {
