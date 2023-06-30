@@ -69,9 +69,9 @@
             <div class="upper-header">
                 <div class="container">
                     <div v-if="dynamicContact" class="upper-header-content">
-                        <h1 class="d-none d-sm-block company-name">
+                        <div class="d-none d-sm-block company-name">
                             Официальный дилер Shacman в России
-                        </h1>
+                        </div>
                         <client-only>
                             <span v-if="dynamicContact.email">
                                 <a

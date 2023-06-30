@@ -7,10 +7,9 @@
             <v-row align="center" class="block-padding">
                 <v-col cols="12" lg="6">
                     <div class="mr-xl-9 mr-lg-4">
-                        <h2 class="text-uppercase mb-md-14 mb-9">
-                            Немного о&nbsp;«KOMTRANS&nbsp;
-                            <span class="text-none">Group</span>»
-                        </h2>
+                        <h1 class="text-uppercase mb-md-14 mb-9 heading-h1">
+                            Официальный дилер спецтехники Shacman в России
+                        </h1>
                         <p>
                             Компания основана в 2009 году и на протяжении многих
                             лет успешно реализует спецтехнику Shacman. За время
@@ -64,7 +63,7 @@
                                 fill="#231F20"
                             />
                         </svg>
-                        <svg-map :city-slug="dynamicContact.slug" :contacts="contacts"></svg-map>
+                        <svg-map :city-slug="dynamicContact?.slug" :contacts="contacts"></svg-map>
                     </div>
                 </client-only>
             </div>
@@ -234,6 +233,22 @@ export default {
     width: 50vw;
     left: 0;
     top: 0;
+}
+
+.heading-h1 {
+    font-size: 51px;
+
+    @include lg {
+        font-size: 40px;
+    }
+
+    @include sm {
+        font-size: 30px;
+    }
+
+    @include xs {
+        font-size: 22px;
+    }
 }
 
 @include lg {
