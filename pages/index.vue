@@ -33,9 +33,9 @@
                             </v-col>
                         </v-row>
                     </div>   
-                    <div v-if="settings.video" class="pt-14">
+                    <div v-if="settings.video" class="pt-14 block-video">
                       <v-row>
-                        <v-col sm="6" md="3" lg="4">
+                        <v-col sm="6" md="4" lg="6">
                           <div class="iframe-video-block">
                             <iframe loading="lazy" :src="settings.video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                           </div>
@@ -266,6 +266,10 @@ export default {
 @include md {
     .card-info {
         width: 30vw;
+    }
+
+    .block-video {
+      margin-bottom: 40px;
     }
 }
 
