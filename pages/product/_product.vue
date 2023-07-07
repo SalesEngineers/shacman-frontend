@@ -196,7 +196,13 @@
             </div>
 
             <div v-if="product.video" class="block-padding">
-                <iframe loading="lazy" class="iframe-video-block" :src="videoYoutube" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <v-row>
+                <v-col sm="6" md="3" lg="4">
+                  <div class="iframe-video-block">
+                    <iframe loading="lazy" :src="videoYoutube" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </v-col>
+              </v-row>
                 <!--<svg @click="showYouTube = true" width="70" height="70" viewBox="0 0 78 78" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="39" cy="39" r="35" fill="#0154A6"/>
                     <path d="M53 39.5L32.75 27.8087V51.1913L53 39.5Z" fill="white"/>

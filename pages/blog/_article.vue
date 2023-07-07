@@ -15,15 +15,20 @@
                         />
                         <div class="mb-lg-14 mb-13" v-html="article.content"></div>
                         <div v-if="article.video" class="block-padding">
-                            <iframe
-                                loading="lazy"
-                                class="iframe-video-block"
-                                :src="article.video"
-                                title="YouTube video player"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen
-                            ></iframe>
+                          <v-row>
+                            <v-col sm="6" md="3" lg="4">
+                              <div class="iframe-video-block">
+                                <iframe
+                                    loading="lazy"                                
+                                    :src="article.video"
+                                    title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen
+                                ></iframe>
+                              </div>
+                            </v-col>
+                          </v-row>
                         </div>
                         <nuxt-link
                             class="href-primary big-main-text underline-href text-none font-weight-bold"
