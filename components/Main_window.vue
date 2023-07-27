@@ -38,7 +38,8 @@
         <v-container class="main-window-content_wrap">
             <v-row class="main-window_content">
                 <v-col lg="8">
-                    <div class="pb-10 pb-sm-15 pt-16 slide-title" v-html="currentSlide.title || title"></div>
+                    <component class="pb-10 pb-sm-15 pt-16 slide-title" :is="currentSlide?.tag || tag" v-html="currentSlide?.title || title"></component>
+
                     <nuxt-link :to="currentSlide.link" v-if="currentSlide?.link">
                         <v-btn
                             class="main-window_button text-none font-weight-bold"
@@ -84,6 +85,10 @@ export default {
             type: String,
             default: "",
         },
+        tag: {
+            type: String,
+            default: 'div'
+        }
     },
     data() {
         return {

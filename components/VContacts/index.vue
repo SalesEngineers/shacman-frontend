@@ -1,7 +1,7 @@
 <template>
     <div class="contacts">
         <div class="d-sm-flex d-block mb-9 mb-md-12 align-center justify-space-between">
-            <h2 class="text-uppercase">Контакты</h2>
+            <component :is="tag" class="text-uppercase">Контакты</component>
             <div v-if="showLink">
                 <nuxt-link
                     class="font-weight-bold underline-href contacts-link"
@@ -147,6 +147,11 @@ export default {
             type: Boolean,
             default: true,
         },
+
+        tag: {
+            type: String,
+            default: 'h2'
+        }
     },
 
     data() {
