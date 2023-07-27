@@ -1,7 +1,7 @@
 <template>
     <div class="content-padding">
         <v-container class="content-padding">
-            <v-contacts :show-link="false"></v-contacts>
+            <v-contacts :show-link="false" tag="h1"></v-contacts>
         </v-container>
 
         <v-container>

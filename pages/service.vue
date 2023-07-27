@@ -6,7 +6,8 @@
                     title: 'Сервисное обслуживание спецтехники Shacman в Красноярске',
                     btnTitle: 'Получить консультацию',
                     image: '/img/services/slide-1.jpg',
-                    link: ''
+                    link: '',
+                    tag: 'h1'
                 },
             ]"
         />

@@ -32,21 +32,29 @@
                                 >Узнать подробнее</nuxt-link>
                             </v-col>
                         </v-row>
-                    </div>   
-                    <div v-if="settings.video" class="pt-14 block-video">
-                      <v-row>
-                        <v-col sm="6" md="4" lg="6">
-                          <div class="iframe-video-block">
-                            <iframe loading="lazy" :src="settings.video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                          </div>
-                        </v-col>
-                      </v-row>
-                    </div>                  
+                    </div>                                       
                 </v-col>
                 <v-col cols="12" lg="6">
                     <CollageMain />
                 </v-col>
             </v-row>
+
+            <div v-if="settings.video" class="block-padding">
+                <v-row>
+                    <v-col cols="12" md="6">
+                        <div class="iframe-video-block">
+                            <iframe
+                                :src="settings.video"
+                                loading="lazy"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
+                            ></iframe>
+                        </div>
+                    </v-col>
+                </v-row>
+            </div>
 
             <div class="block-padding">
                 <h2 class="mb-md-14 mb-9 text-uppercase">Наши филиалы</h2>

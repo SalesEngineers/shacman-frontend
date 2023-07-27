@@ -89,9 +89,13 @@ h3 {
 .iframe-video-block {
   position: relative;
   display: block;
+  border-radius: 4px;
+  box-shadow: $card-shadow;
+  overflow: hidden;
+
   &::before {
     display: block;
-    padding-top: 100%;
+    padding-top: 56.25%;
     content: "";
   }
 

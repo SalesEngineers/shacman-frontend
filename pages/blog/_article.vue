@@ -16,7 +16,7 @@
                         <div class="mb-lg-14 mb-13" v-html="article.content"></div>
                         <div v-if="article.video" class="block-padding">
                           <v-row>
-                            <v-col sm="6" md="4" lg="3">
+                            <v-col cols="12" md="6">
                               <div class="iframe-video-block">
                                 <iframe
                                     loading="lazy"                                

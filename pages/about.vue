@@ -65,7 +65,7 @@
 
             <div v-if="settings.video" class="block-padding">
               <v-row>
-                <v-col sm="6" md="4" lg="3">
+                <v-col cols="12" md="6">
                   <div class="iframe-video-block">
                     <iframe loading="lazy" :src="settings.video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   </div>
