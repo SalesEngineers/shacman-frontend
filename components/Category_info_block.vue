@@ -21,9 +21,6 @@
         </v-row>
         <v-row>
             <v-col cols="12" md="6">
-                <iframe class="mb-5 mb-sm-10 mb-md-0" src="https://www.youtube.com/embed/nNMz5ACE_zY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </v-col>
-            <v-col cols="12" md="6">
                 <iframe src="https://www.youtube.com/embed/UNSInCTi12Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </v-col>
         </v-row>
