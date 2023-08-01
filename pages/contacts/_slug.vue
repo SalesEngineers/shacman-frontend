@@ -38,7 +38,11 @@ export default {
                     name: "description",
                     content: this.contact?.seo?.description ?? "",
                 },
-                { hid: "keywords", name: "keywords", content: this.contact?.seo?.keywords ?? "" },
+                {
+                    hid: "keywords",
+                    name: "keywords",
+                    content: this.contact?.seo?.keywords ?? "",
+                },
             ],
         };
     },
@@ -50,40 +54,42 @@ export default {
 
         images() {
             return this.contact?.images || [];
-        }
+        },
     },
 
     async asyncData({ store, params, error }) {
         const { slug } = params;
-        
-        const contact = await store
-            .dispatch("loadContact", slug)
-            .then((r) => r.data.data)
-            .catch(() => {
-                error({ statusCode: 404, message: "Страница не найдена" });
-            });
-        
-        store.commit("onVisabilityHeader");
-        store.commit("setBreadCrumbs", [
-            {
-                text: "Официальный дилер XCMG",
-                disabled: false,
-                href: "/",
-                position: 1,
-            },
-            {
-                text: "Контакты",
-                disabled: false,
-                href: "/contacts",
-                position: 2,
-            },
-            {
-                text: contact.title || contact.name,
-                disabled: true,
-                href: "",
-                position: 3,
-            },
-        ]);
+        let contact;
+
+        try {
+            contact = await store
+                .dispatch("loadContact", slug)
+                .then((r) => r.data.data);
+
+            store.commit("onVisabilityHeader");
+            store.commit("setBreadCrumbs", [
+                {
+                    text: "Официальный дилер XCMG",
+                    disabled: false,
+                    href: "/",
+                    position: 1,
+                },
+                {
+                    text: "Контакты",
+                    disabled: false,
+                    href: "/contacts",
+                    position: 2,
+                },
+                {
+                    text: contact.title || contact.name,
+                    disabled: true,
+                    href: "",
+                    position: 3,
+                },
+            ]);
+        } catch (e) {
+            error({ statusCode: 404, message: "Страница не найдена" });
+        }
 
         return {
             contact,
