@@ -230,6 +230,13 @@ export default {
     max-height: 340px;
     display: block;
 }
+
+.blog-content {
+    a {
+        color: #231F20 !important;
+    }
+}
+
 @include md {
     .article {
         margin-right: 0px;

@@ -68,7 +68,11 @@
 
             <CategoryInfo v-if="category.id == 3"/>
 
-            <div class="block-padding column-content category-content" v-if="category.content" v-html="category.content">
+            <div class="block-padding category-content" v-if="category.content" v-html="category.content">
+            </div>
+
+            <div v-if="category?.gallery?.tabs.length" class="block-padding">
+                <category-gallery :name="category.gallery.name" :collection="category.gallery.tabs"></category-gallery>
             </div>
 
             <Feedback/>
@@ -98,6 +102,7 @@ import Catalog from '~/components/Catalog_tech_list.vue'
 import Pagination from '~/components/Pagination.vue'
 import Feedback from '~/components/Feedback.vue'
 import CategoryInfo from '~/components/Category_info_block.vue'
+import CategoryGallery from "~/components/CategoryGallery";
 
 export default {
     components: {
@@ -107,7 +112,8 @@ export default {
         Catalog,
         Pagination,
         Feedback,
-        CategoryInfo
+        CategoryInfo,
+        CategoryGallery
     },
     data() {
         return {

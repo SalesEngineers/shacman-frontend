@@ -61,7 +61,7 @@
 
             <CategoryInfo v-if="category.id == 3"/>
             
-            <div class="block-padding column-content category-content" v-if="subcategory.content" v-html="subcategory.content">
+            <div class="block-padding category-content" v-if="subcategory.content" v-html="subcategory.content">
             </div>
             
             <Feedback/>
