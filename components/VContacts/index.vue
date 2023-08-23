@@ -151,6 +151,11 @@ export default {
         tag: {
             type: String,
             default: 'h2'
+        },
+
+        contact: {
+            type: Object,
+            default: null
         }
     },
 
@@ -172,7 +177,7 @@ export default {
     watch: {
         contacts: {
             handler(newCity, oldCity) {
-                if (!oldCity && newCity?.length > 0) {
+                if (!oldCity && newCity?.length > 0 && !this.contact) {
                     this.setCurrentCity(this.dynamicContact || newCity[0]);
                 }
             },
@@ -188,6 +193,12 @@ export default {
             }
         },
     },
+
+    mounted() {
+        if (this.contact) {
+            this.setCurrentCity(this.contact)
+        }
+    }
 };
 </script>
 

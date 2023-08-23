@@ -13,7 +13,7 @@
                 </v-col>
             </v-row>
 
-            <v-contacts :show-link="false"></v-contacts>
+            <v-contacts :show-link="false" :contact="contact"></v-contacts>
         </v-container>
     </div>
 </template>
@@ -77,7 +77,7 @@ export default {
                 {
                     text: "Контакты",
                     disabled: false,
-                    href: "/contacts",
+                    href: "/contacts/",
                     position: 2,
                 },
                 {
