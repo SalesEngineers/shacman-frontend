@@ -231,10 +231,6 @@ export default {
     display: block;
 }
 
-.blog-content {
-    --v-anchor-base: #231F20;
-}
-
 @include md {
     .article {
         margin-right: 0px;
@@ -244,6 +240,31 @@ export default {
     .articles-block .v-card {
         height: 400px;
         min-height: unset;
+    }
+}
+</style>
+
+<style lang="scss">
+.blog-content {
+    --v-anchor-base: #231F20;
+
+    a {
+        color: $primary-color;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    h2 {
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+
+    h3 {
+        margin-top: 15px;
+        margin-bottom: 5px;
     }
 }
 </style>

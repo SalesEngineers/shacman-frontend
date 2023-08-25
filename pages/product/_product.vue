@@ -97,10 +97,10 @@
 
                             <p class="font-weight-bold mb-8">Рабочие показатели:</p>
                             <div class="column-content" v-if="characteristics.length != 0">
-                                <div class="d-flex justify-space-between " v-for="(item, index) in characteristics"
+                                <div class="d-flex justify-space-between product-characteristic" v-for="(item, index) in characteristics"
                                     :key="index">
-                                    <p class="pr-1">{{ item.name }}: </p>
-                                    <p>{{ item.value }}</p>
+                                    <p class="pr-2 product-characteristic-label">{{ item.name }}: </p>
+                                    <p class="product-characteristic-value">{{ item.value }}</p>
                                 </div>
                             </div>
                             <div v-else>
@@ -409,6 +409,13 @@ export default {
     }
     .product-characteristics {
         padding: 0 20px;
+    }
+    .product-characteristic {
+        line-height: 1.2;
+    }
+    .product-characteristic-label {
+        min-width: 45%;
+        font-weight: 700;
     }
     .lizing-content {
         padding: 30px 40px;
