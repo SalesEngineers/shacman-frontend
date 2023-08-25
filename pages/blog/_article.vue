@@ -232,9 +232,7 @@ export default {
 }
 
 .blog-content {
-    a {
-        color: #231F20 !important;
-    }
+    --v-anchor-base: #231F20;
 }
 
 @include md {

@@ -112,7 +112,7 @@
                     <v-tab-item v-if="product.content">  
                         <v-card>
 
-                            <div class="column-content">
+                            <div class="">
                                 <p v-html="product.content">
                                 </p>
                             </div>
