@@ -5,7 +5,7 @@
             <p class="font-weight-bold mb-lg-11 mb-10">{{ article.published_at | formatDate }}</p>
             <v-row>
                 <v-col :class="twoArticles.length == 0 ? 'col-12' : 'col-md-8 col-12'">
-                    <div class="article mb-14 mb-md-0">
+                    <div class="article blog-content mb-14 mb-md-0">
                         <img
                             class="mb-lg-14 mb-13"
                             v-if="article.image_horizontal.url || article.image_vertical.url"
