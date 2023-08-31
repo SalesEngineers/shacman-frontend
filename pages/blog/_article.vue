@@ -250,10 +250,11 @@ export default {
 
     a {
         color: $primary-color;
-        text-decoration: underline;
+        text-decoration: none;
+        border-bottom: 2px solid $primary-color;
 
         &:hover {
-            text-decoration: none;
+            border-bottom-color: transparent;
         }
     }
 
