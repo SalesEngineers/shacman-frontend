@@ -148,7 +148,7 @@ export default {
     },
     head() {
         return {
-            title: "Продажа грузовых автомобилей Shacman Shaanxi от официального дилера",
+            title: "Продажа грузовых машин Shacman от официального дилера в России",
             meta: [
                 { charset: "utf-8" },
                 {
