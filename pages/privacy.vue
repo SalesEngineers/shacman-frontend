@@ -95,7 +95,7 @@ export default {
       title: 'Политика конфиденциальности',
       meta: [
           { charset: 'utf-8' },
-          { hid: 'description', name: 'description', content: 'Политика конфиденциальности - Продажа китайской спецтехники Shacman по России от официального дилера.'},
+          { hid: 'description', name: 'description', content: 'Политика конфиденциальности - Продажа китайской грузовой техники Shacman по России от официального дилера.'},
           { hid: 'keywords', name: 'keywords', content: 'политика конфиденциальности'}
       ]
       }

@@ -77,15 +77,22 @@
 
             <Feedback/>
 
-            <div v-if="category.video" class="block-padding">
-              <v-row>
-                <v-col cols="12" md="6">
-                  <div class="iframe-video-block">
-                    <iframe loading="lazy" :src="category.video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  </div>
-                </v-col>
-              </v-row>
-            </div>
+            <client-only>
+                <div v-if="category.video || category.videos.length" class="block-padding">
+                    <v-row>
+                        <v-col v-if="category.video" col="12" md="6">
+                        <div class="iframe-video-block">
+                            <iframe loading="lazy" :src="category.video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        </v-col>
+                        <v-col v-for="(video, i) in category.videos" :key="i" col="12" md="6">
+                            <div class="iframe-video-block">
+                                <iframe loading="lazy" :src="video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </v-col>
+                    </v-row>
+                </div>
+            </client-only>
            
             <v-contacts></v-contacts>
 

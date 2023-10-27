@@ -240,7 +240,7 @@
                                         :class="
                                             spectech ? 'menu-left_hover' : ''
                                         "
-                                        >Спецтехника</span
+                                        >Грузовая техника</span
                                     >
                                 </span>
                                 <span
@@ -325,7 +325,7 @@
             </div>
             <client-only>
                 <div
-                    v-if="displayBreadcrumbs"
+                    v-if="displayBreadcrumbs.length"
                     :class="[
                         viasbilityBreadcrumbs ? 'show-breadcrumbs' : '',
                         visabilityHeader ? 'breadcrumbs-item_colored' : '',
@@ -340,35 +340,30 @@
                     >
                         <template v-slot:item="{ item }">
                             <li
+                                v-if="!item.disabled"
                                 itemprop="itemListElement"
                                 itemtype="https://schema.org/ListItem"
                                 itemscope=""
                             >
-                                <template v-if="!item.disabled">
-                                    <nuxt-link :to="item.href" itemprop="item">
-                                        <span itemprop="name">{{
-                                            item.text
-                                        }}</span>
-                                    </nuxt-link>
-                                    <meta
-                                        itemprop="position"
-                                        :content="item.position"
-                                    />
-                                </template>
-                                <template v-else>
-                                    <span
-                                        :class="
-                                            visabilityHeader
-                                                ? 'disabled-breadcrumb-black'
-                                                : 'disabled-breadcrumb-white'
-                                        "
-                                        >{{ item.text }}</span
-                                    >
-                                    <meta
-                                        itemprop="position"
-                                        :content="item.position"
-                                    />
-                                </template>
+                                <nuxt-link :to="item.href" itemprop="item">
+                                    <span itemprop="name">{{
+                                        item.text
+                                    }}</span>
+                                </nuxt-link>
+                                <meta
+                                    itemprop="position"
+                                    :content="item.position"
+                                />
+                            </li>
+                            <li v-else>
+                                <span
+                                    :class="
+                                        visabilityHeader
+                                            ? 'disabled-breadcrumb-black'
+                                            : 'disabled-breadcrumb-white'
+                                    "
+                                    >{{ item.text }}</span
+                                >
                             </li>
                         </template>
                     </v-breadcrumbs>

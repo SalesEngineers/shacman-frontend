@@ -232,13 +232,13 @@
                     <v-col cols="12" md="6">
                         <v-card class="shadow-text-card">
                         <p class="card-title primary-text text-uppercase">Доставка</p>
-                        <p>Доставка возможна эвакуатором, фурой, ЖД&nbsp;транспортом. Служба доставки может осуществлять разборку спецтехники, погрузку, увязку, доставку, разгрузку, сборку, ТО на&nbsp;месте эксплуатации &nbsp;передачу покупателю. Ответственность за&nbsp;время всех работ и&nbsp;доставки несет компания.</p>
+                        <p>Доставка возможна эвакуатором, фурой, ЖД&nbsp;транспортом. Служба доставки может осуществлять разборку грузовой техники, погрузку, увязку, доставку, разгрузку, сборку, ТО на&nbsp;месте эксплуатации &nbsp;передачу покупателю. Ответственность за&nbsp;время всех работ и&nbsp;доставки несет компания.</p>
                         </v-card>
                     </v-col>
                     <v-col cols="12" md="3">
                         <v-card class="shadow-text-card">
                         <p class="card-title primary-text text-uppercase">Гарантия</p>
-                        <p>Одна из самых долгих гарантий на рынке спецтехники — 24&nbsp;месяца или 3000&nbsp;моточасов.</p>
+                        <p>Одна из самых долгих гарантий на рынке грузовой техники — 24&nbsp;месяца или 3000&nbsp;моточасов.</p>
                         </v-card>
                     </v-col>
                 </v-row>
@@ -257,7 +257,7 @@
             
             <v-contacts></v-contacts>
         </v-container>
-        <FeedbackMan title="Подберём технику специально для вас!" content="Квалифицированный менеджер поможет с выбором спецтехники под вашу задачу и ответит на любой вопрос" btnTitle="Подобрать технику"/>
+        <FeedbackMan title="Подберём технику специально для вас!" content="Квалифицированный менеджер поможет с выбором грузовой техники под вашу задачу и ответит на любой вопрос" btnTitle="Подобрать технику"/>
     </div>
 </template>
 
@@ -312,7 +312,19 @@ export default {
                 { charset: 'utf-8' },
                 { hid: 'description', name: 'description', content: this.product.seo.description},
                 { hid: 'keywords', name: 'keywords', content: this.product.seo.keywords}
-            ]
+            ],
+            link: [
+                {
+                    rel: "preload",
+                    as: "image",
+                    href: "/img/logo_shacman.svg",
+                },
+                {
+                    rel: "preload",
+                    as: "image",
+                    href: this.product.images.length ? this.product.images[0]?.url : "",
+                },
+            ],
         }
     },
     async asyncData ({ $axios, error, route }) {

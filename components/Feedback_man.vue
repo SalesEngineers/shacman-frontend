@@ -7,7 +7,7 @@
                 </h2>
                 <p class="mb-14" v-html="content">
                 </p>
-                <v-btn class="main-window_button text-none font-weight-bold mb-md-14 mb-9" color="primary" @click="$store.commit('onModalWindow', {title: btnTitle, btnName: btnTitle})">
+                <v-btn class="main-window_button text-none font-weight-bold mb-md-14 mb-9" color="primary" @click="$store.commit('onModalWindow', {title: formTitle || btnTitle, btnName: formBtnTitle || btnTitle})">
                     {{ btnTitle }}
                 </v-btn>
             </div>
@@ -35,6 +35,14 @@ export default {
     btnTitle: {
         type: String,
         default: 'Подать заявку'
+    },
+    formTitle: {
+        type: String,
+        default: null
+    },
+    formBtnTitle: {
+        type: String,
+        default: null
     }
   },
 }

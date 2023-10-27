@@ -10,7 +10,7 @@ export default {
     titleTemplate: '%s - Shacman',
     title: 'Shacman',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'ru-RU'
     },
     meta: [
       { charset: 'utf-8' },

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <MainWindow :slides="[{image: '/img/lizing/slide-1.jpg', title: 'Лизинг спецтехники Shacman', tag: 'h1', btnTitle: 'Получить консультацию', link: ''}]"/>
+    <MainWindow :slides="[{image: '/img/lizing/slide-1.jpg', title: 'Лизинг грузовой техники Shacman', tag: 'h1', btnTitle: 'Получить консультацию', link: ''}]"/>
     <v-container class="content-padding">
         <v-row align="center" class="block-padding mt-0">
             <v-col cols="12" lg="6">
@@ -63,8 +63,8 @@ export default {
         title: 'Лизинг китайской техники',
         meta: [
             { charset: 'utf-8' },
-            { hid: 'description', name: 'description', content: 'Лизинг спецтехники Shacman - Условия: Первоначальный взнос от 10% ⬥ Срок лизинга от 1 до 5 лет ⬥ Удорожание до 5% ⬥ Досрочное погашение.'},
-            { hid: 'keywords', name: 'keywords', content: 'лизинг спецтехники shacman, шахман, шакман'}
+            { hid: 'description', name: 'description', content: 'Лизинг грузовой техники Shacman - Условия: Первоначальный взнос от 10% ⬥ Срок лизинга от 1 до 5 лет ⬥ Удорожание до 5% ⬥ Досрочное погашение.'},
+            { hid: 'keywords', name: 'keywords', content: 'лизинг грузовой техники shacman, шахман, шакман'}
         ]
         }
     },

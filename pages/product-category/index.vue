@@ -2,13 +2,13 @@
     <div>
         <v-container class="content-padding">
             <h1 class="mb-md-14 mb-9">
-                Каталог спецтехники Shacman
+                Каталог грузовой техники Shacman
             </h1>
             <!-- <Banner class="block-padding"/> -->
 
             <div class="block-padding" v-if="catalogSpec.length != 0">
                 <h2 class="text-uppercase mb-md-14 mb-9">
-                    Cпецтехника
+                    Грузовая техника
                 </h2>
                 <Catalog :items="catalogSpec"/>
             </div>
@@ -31,7 +31,7 @@
             
             <v-contacts></v-contacts>
         </v-container>
-        <FeedbackMan title="Подберём технику специально для вас!" content="Квалифицированный менеджер поможет с выбором спецтехники под вашу задачу и ответит на любой вопрос" btnTitle="Подобрать технику"/>
+        <FeedbackMan title="Подберём технику специально для вас!" content="Квалифицированный менеджер поможет с выбором грузовой техники под вашу задачу и ответит на любой вопрос" btnTitle="Подобрать технику"/>
     </div>
 </template>
 
@@ -51,10 +51,10 @@ export default {
     },
     head () {
         return {
-        title: 'Каталог китайской спецтехники Shacman (Шакман) по выгодным ценам',
+        title: 'Каталог китайской грузовой техники Shacman по выгодным ценам',
         meta: [
             { charset: 'utf-8' },
-            { hid: 'description', name: 'description', content: 'Продажа китайской спецтехники Shacman (Шакман) от официального дилера по России: в наличии самосвалы, грузовая техника, седельные тягачи, автобетоносмесители.' },
+            { hid: 'description', name: 'description', content: 'Продажа китайской грузовой техники Shacman от официального дилера по России: в наличии самосвалы, грузовая техника, седельные тягачи, автобетоносмесители и др.' },
             { hid: 'keywords', name: 'keywords', content: 'каталог спецтехники shacman, шакман, шахман, продажа, купить, цена' }
         ]
         }

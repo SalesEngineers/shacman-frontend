@@ -2,7 +2,7 @@
   <div class="collage-wrap">
     <v-card class="collage-card div1 pa-5 pa-md-7" outlined>
       <p>
-        Подбор спецтехники
+        Подбор грузовой техники
         <span class="primary-text"> под&nbsp;вашу задачу</span>
       </p>
     </v-card>

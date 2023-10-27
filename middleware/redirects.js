@@ -10,4 +10,8 @@ export default function ({ route, redirect }) {
   if (route.fullPath.indexOf("_") != -1) {
     redirect(301, route.fullPath.replace("_", "-"));
   }
+
+  if (route.fullPath !== route.fullPath.toLowerCase()) {
+    redirect(301, route.fullPath.toLowerCase());
+  }
 }
