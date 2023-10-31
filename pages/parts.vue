@@ -20,7 +20,7 @@
             <v-contacts></v-contacts>
         </v-container>
         
-        <FeedbackMan title="Подберём запчасти<br>специально для&nbsp;вас!" content="Квалифицированный менеджер поможет с выбором и ответит на любой вопрос " btnTitle="Оставить заявк" formTitle="Оставить заявку" fromBtnTitle="Отправить"/>
+        <FeedbackMan title="Подберём запчасти<br>специально для&nbsp;вас!" content="Квалифицированный менеджер поможет с выбором и ответит на любой вопрос " btnTitle="Оставить заявку" formTitle="Оставить заявку" fromBtnTitle="Отправить"/>
     </div>
 </template>
 
