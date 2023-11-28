@@ -121,8 +121,8 @@
                 <v-tabs-items v-model="tab">
                     <v-tab-item>
                         <v-card>
-                            <p class="font-weight-bold mb-8">Рабочие показатели:</p>
-                            <div class="column-content" v-if="characteristics.length != 0">
+                            <!-- <p class="font-weight-bold mb-8">Рабочие показатели:</p> -->
+                            <!-- <div class="column-content" v-if="characteristics.length != 0">
                                 <div
                                     class="d-flex justify-space-between product-characteristic"
                                     v-for="(item, index) in characteristics"
@@ -131,6 +131,21 @@
                                     <p class="pr-2 product-characteristic-label">{{ item.name }}:</p>
                                     <p class="product-characteristic-value">{{ item.value }}</p>
                                 </div>
+                            </div> -->
+                            <div v-if="groups.length">
+                                <div class="mb-5 group" v-for="(group, i) in groups" :key="i">
+                                    <div class="group-title" v-if="group.name">{{ group.name }}</div>
+                                    <div class="column-content pb-2">
+                                        <div
+                                            class="d-flex justify-space-between product-characteristic"
+                                            v-for="(item, j) in group.values"
+                                            :key="j"
+                                        >
+                                            <p class="pr-2 product-characteristic-label">{{ item.name }}:</p>
+                                            <p class="product-characteristic-value">{{ item.value }}</p>
+                                        </div>
+                                    </div>
+                                </div>                                
                             </div>
                             <div v-else>
                                 <p class="font-weight-bold">Уточняйте у менеджера</p>
@@ -383,6 +398,37 @@ export default {
 
             return null;
         },
+        groups() {
+            const groups = new Map;
+
+            this.characteristics.forEach(characteristic => {
+                if (characteristic.groups.length) {
+                    characteristic.groups.forEach(group => {
+                        let items = { id: group.id, name: group.name, values: [] };
+                        
+                        if (groups.has(group.id)) {
+                            items = groups.get(group.id);
+                        }
+
+                        items.values.push(characteristic);
+
+                        groups.set(group.id, items);
+                    });
+                } else {
+                    let items = { id: null, name: null, values: [] };
+
+                    if (groups.has(null)) {
+                        items = groups.get(null);
+                    }
+
+                    items.values.push(characteristic);
+
+                    groups.set(null, items);
+                }
+            });
+
+            return [...groups.values()];
+        }
     },
     head() {
         return {
@@ -511,6 +557,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.group {
+    border-bottom: 1px solid #dfe9eb;
+    padding-bottom: 5px;
+}
+.group-title {
+    border-left: 4px solid #dfe9eb;
+    align-items: center;
+    display: flex;
+    padding-left: 8px;
+    padding-bottom: 0 !important;
+    margin-bottom: 14px;
+    text-transform: none !important;
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+}
 .label-wrapper {
     position: absolute;
     display: flex;
