@@ -279,13 +279,25 @@
                 </v-row>
             </div>
 
-            <div v-if="product.video" class="block-padding">
+            <div v-if="videoYoutube || videosYoutube.length" class="block-padding">
                 <v-row>
-                    <v-col cols="12" md="6">
+                    <v-col v-if="videoYoutube" cols="12" md="6">
                         <div class="iframe-video-block">
                             <iframe
                                 loading="lazy"
                                 :src="videoYoutube"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
+                            ></iframe>
+                        </div>
+                    </v-col>
+                    <v-col v-for="(multipleVideoYoutube, i) in videosYoutube" :key="i" cols="12" md="6">
+                        <div class="iframe-video-block">
+                            <iframe
+                                loading="lazy"
+                                :src="multipleVideoYoutube"
                                 title="YouTube video player"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -397,6 +409,17 @@ export default {
             }
 
             return null;
+        },
+        videosYoutube() {
+            return (this.product?.videos || []).map(video => {
+                const matched = video.match(YOUTUBE_REG);
+
+                if (matched[1]) {
+                    return `https://www.youtube.com/embed/${matched[1]}`;
+                }
+
+                return null;
+            }).filter(video => video !== null);
         },
         groups() {
             const groups = new Map;
