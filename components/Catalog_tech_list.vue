@@ -29,7 +29,7 @@
                                 <path d="M0 0H17L2.55556 36H0V0Z" fill="#8D8D8D" />
                             </svg>
                         </div>
-                        <div class="label-wrapper" v-else-if="item.labels.length != 0">
+                        <component v-else-if="item.labels.length != 0" :is="item.labels[0]?.noindex ? 'noindex' : 'div'" class="label-wrapper">
                             <div class="label" :style="'background-color:' + item.labels[0].color">
                                 <span>{{ item.labels[0].name }}</span>
                             </div>
@@ -42,7 +42,7 @@
                             >
                                 <path d="M0 0H17L2.55556 36H0V0Z" :fill="item.labels[0].color" />
                             </svg>
-                        </div>
+                        </component>
                         <img
                             v-if="item.images.length == 1"
                             :src="item.images[0].url"
