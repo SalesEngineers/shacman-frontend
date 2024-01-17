@@ -48,7 +48,9 @@
                                     :key="index"
                                     class="px-2 py-1 text-lowercase product-content__label mr-4 mb-2 d-block"
                                     :style="'background-color:' + item.color + ';color:white'"
-                                >{{ item.name }}</span>
+                                >
+                                    <component :is="item?.noindex ? 'noindex' : ''">{{ item.name }}</component>
+                                </span>
                                 <nuxt-link to="/parts/" class="mr-4 mb-2">
                                     <span
                                         class="px-2 py-1 text-lowercase product-content__label product-content__label_parts d-block"
