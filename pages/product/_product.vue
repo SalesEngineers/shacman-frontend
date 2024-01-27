@@ -109,108 +109,111 @@
                 </v-row>
             </div>
 
-            <div class="block-padding main-content-product">
-                <v-tabs v-model="tab" show-arrows center-active>
-                    <v-tab class="text-none font-weight-bold">Характеристики</v-tab>
+            <div class="block-padding">
+                <h2 class="mb-md-14 mb-9 text-uppercase">Характеристики</h2>
+                <div class="block-padding main-content-product">
+                    <v-tabs v-model="tab" show-arrows center-active>
+                        <v-tab class="text-none font-weight-bold">Основное</v-tab>
 
-                    <v-tab v-if="product.content" class="text-none font-weight-bold">Описание</v-tab>
+                        <v-tab v-if="product.content" class="text-none font-weight-bold">Описание</v-tab>
 
-                    <v-tab
-                        v-if="product.dimension.width || product.dimension.height || product.dimension.length || product.dimension.image_list"
-                        class="text-none font-weight-bold"
-                    >Габариты</v-tab>
-                </v-tabs>
-                <v-tabs-items v-model="tab">
-                    <v-tab-item>
-                        <v-card>
-                            <!-- <p class="font-weight-bold mb-8">Рабочие показатели:</p> -->
-                            <!-- <div class="column-content" v-if="characteristics.length != 0">
-                                <div
-                                    class="d-flex justify-space-between product-characteristic"
-                                    v-for="(item, index) in characteristics"
-                                    :key="index"
-                                >
-                                    <p class="pr-2 product-characteristic-label">{{ item.name }}:</p>
-                                    <p class="product-characteristic-value">{{ item.value }}</p>
-                                </div>
-                            </div> -->
-                            <div v-if="groups.length">
-                                <div class="mb-5 group" v-for="(group, i) in groups" :key="i">
-                                    <div class="group-title" v-if="group.name">{{ group.name }}</div>
-                                    <div class="column-content pb-2">
-                                        <div
-                                            class="d-flex justify-space-between product-characteristic"
-                                            v-for="(item, j) in group.values"
-                                            :key="j"
-                                        >
-                                            <p class="pr-2 product-characteristic-label">{{ item.name }}:</p>
-                                            <p class="product-characteristic-value">{{ item.value }}</p>
-                                        </div>
+                        <v-tab
+                            v-if="product.dimension.width || product.dimension.height || product.dimension.length || product.dimension.image_list"
+                            class="text-none font-weight-bold"
+                        >Габариты</v-tab>
+                    </v-tabs>
+                    <v-tabs-items v-model="tab">
+                        <v-tab-item>
+                            <v-card>
+                                <!-- <p class="font-weight-bold mb-8">Рабочие показатели:</p> -->
+                                <!-- <div class="column-content" v-if="characteristics.length != 0">
+                                    <div
+                                        class="d-flex justify-space-between product-characteristic"
+                                        v-for="(item, index) in characteristics"
+                                        :key="index"
+                                    >
+                                        <p class="pr-2 product-characteristic-label">{{ item.name }}:</p>
+                                        <p class="product-characteristic-value">{{ item.value }}</p>
                                     </div>
-                                </div>                                
-                            </div>
-                            <div v-else>
-                                <p class="font-weight-bold">Уточняйте у менеджера</p>
-                            </div>
-                        </v-card>
-                    </v-tab-item>
+                                </div> -->
+                                <div v-if="groups.length">
+                                    <div class="mb-5 group" v-for="(group, i) in groups" :key="i">
+                                        <div class="group-title" v-if="group.name">{{ group.name }}</div>
+                                        <div class="column-content pb-2">
+                                            <div
+                                                class="d-flex justify-space-between product-characteristic"
+                                                v-for="(item, j) in group.values"
+                                                :key="j"
+                                            >
+                                                <p class="pr-2 product-characteristic-label">{{ item.name }}:</p>
+                                                <p class="product-characteristic-value">{{ item.value }}</p>
+                                            </div>
+                                        </div>
+                                    </div>                                
+                                </div>
+                                <div v-else>
+                                    <p class="font-weight-bold">Уточняйте у менеджера</p>
+                                </div>
+                            </v-card>
+                        </v-tab-item>
 
-                    <v-tab-item v-if="product.content">
-                        <v-card>
-                            <div class>
-                                <p v-html="product.content"></p>
-                            </div>
-                        </v-card>
-                    </v-tab-item>
+                        <v-tab-item v-if="product.content">
+                            <v-card>
+                                <div class>
+                                    <p v-html="product.content"></p>
+                                </div>
+                            </v-card>
+                        </v-tab-item>
 
-                    <v-tab-item
-                        v-if="product.dimension.width || product.dimension.height || product.dimension.length || product.dimension.image_list"
-                    >
-                        <v-card>
-                            <v-row>
-                                <template
-                                    v-if="product.dimension.image_list && product.dimension.image_list.length != 0"
-                                >
+                        <v-tab-item
+                            v-if="product.dimension.width || product.dimension.height || product.dimension.length || product.dimension.image_list"
+                        >
+                            <v-card>
+                                <v-row>
+                                    <template
+                                        v-if="product.dimension.image_list && product.dimension.image_list.length != 0"
+                                    >
+                                        <v-col
+                                            cols="12"
+                                            md="6"
+                                            v-for="(item, index) in product.dimension.image_list"
+                                            :key="index"
+                                        >
+                                            <v-img :src="item" height="400"></v-img>
+                                        </v-col>
+                                    </template>
                                     <v-col
                                         cols="12"
                                         md="6"
-                                        v-for="(item, index) in product.dimension.image_list"
-                                        :key="index"
+                                        v-if="product.dimension.width || product.dimension.height || product.dimension.length"
                                     >
-                                        <v-img :src="item" height="400"></v-img>
+                                        <div
+                                            class="d-flex justify-space-between"
+                                            v-if="product.dimension.width"
+                                        >
+                                            <p>Ширина, мм</p>
+                                            <p>{{ product.dimension.width }}</p>
+                                        </div>
+                                        <div
+                                            class="d-flex justify-space-between"
+                                            v-if="product.dimension.height"
+                                        >
+                                            <p>Высота, мм</p>
+                                            <p>{{ product.dimension.height }}</p>
+                                        </div>
+                                        <div
+                                            class="d-flex justify-space-between"
+                                            v-if="product.dimension.length"
+                                        >
+                                            <p>Длина, мм</p>
+                                            <p>{{ product.dimension.length }}</p>
+                                        </div>
                                     </v-col>
-                                </template>
-                                <v-col
-                                    cols="12"
-                                    md="6"
-                                    v-if="product.dimension.width || product.dimension.height || product.dimension.length"
-                                >
-                                    <div
-                                        class="d-flex justify-space-between"
-                                        v-if="product.dimension.width"
-                                    >
-                                        <p>Ширина, мм</p>
-                                        <p>{{ product.dimension.width }}</p>
-                                    </div>
-                                    <div
-                                        class="d-flex justify-space-between"
-                                        v-if="product.dimension.height"
-                                    >
-                                        <p>Высота, мм</p>
-                                        <p>{{ product.dimension.height }}</p>
-                                    </div>
-                                    <div
-                                        class="d-flex justify-space-between"
-                                        v-if="product.dimension.length"
-                                    >
-                                        <p>Длина, мм</p>
-                                        <p>{{ product.dimension.length }}</p>
-                                    </div>
-                                </v-col>
-                            </v-row>
-                        </v-card>
-                    </v-tab-item>
-                </v-tabs-items>
+                                </v-row>
+                            </v-card>
+                        </v-tab-item>
+                    </v-tabs-items>
+                </div>
             </div>
 
             <div style="display: none;" v-if="product.script" v-html="product.script"></div>
