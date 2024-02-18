@@ -97,7 +97,7 @@
                         <div class="lizing-content test-drive-link__wrapeer">
                             <p
                                 class="mb-0 font-weight-bold text-uppercase"
-                            >{{ product.categories[product.categories.length - 1].name }} XCMG в лизинг</p>
+                            >{{ product.categories[product.categories.length - 1].name }} в лизинг</p>
                             <p :class="{'mb-5':!product.is_out_of_production, 'mb-0': product.is_out_of_production}">с первоначальным взносом от 10%</p>
                             <span
                                 v-if="!product.is_out_of_production"

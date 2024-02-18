@@ -85,6 +85,9 @@ export const actions = {
   async loadContact(_, slug) {
     return await axios
       .get(`https://api.shacman-rf.ru/api/contacts/${slug}/show`)
+  },
+  async loadArticlesPaginate(_, params) {
+    return await axios.get(`https://api.shacman-rf.ru/api/articles`, { params });
   }
 };
 

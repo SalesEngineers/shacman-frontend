@@ -60,7 +60,7 @@ export default {
     },
     head () {
         return {
-        title: 'Лизинг китайской техники',
+        title: 'Лизинг китайской грузовой техники - Shacman',
         meta: [
             { charset: 'utf-8' },
             { hid: 'description', name: 'description', content: 'Лизинг грузовой техники Shacman - Условия: Первоначальный взнос от 10% ⬥ Срок лизинга от 1 до 5 лет ⬥ Удорожание до 5% ⬥ Досрочное погашение.'},

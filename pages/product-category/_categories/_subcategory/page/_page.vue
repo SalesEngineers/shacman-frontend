@@ -128,7 +128,12 @@ export default {
                     rel: 'canonical',
                     href: this.$route.path.split('page/')[0]
                 }
-            ]
+            ],
+            script: [
+                {
+                    innerHTML: this.subcategory?.script,
+                },
+            ],
         }
     },
     async asyncData ({ $axios, error, route }) {

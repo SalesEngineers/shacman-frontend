@@ -136,12 +136,17 @@ export default {
     },
     head () {
         return {
-        title: this.category.seo.title,
-        meta: [
-            { charset: 'utf-8' },
-            { hid: 'description', name: 'description', content: this.category.seo.description },
-            { hid: 'keywords', name: 'keywords', content: this.category.seo.keywords }
-        ]
+            title: this.category.seo.title,
+            meta: [
+                { charset: 'utf-8' },
+                { hid: 'description', name: 'description', content: this.category.seo.description },
+                { hid: 'keywords', name: 'keywords', content: this.category.seo.keywords }
+            ],
+            script: [
+                {
+                    innerHTML: this.category?.script,
+                },
+            ],
         }
     },
     async asyncData ({ $axios, error, route }) {

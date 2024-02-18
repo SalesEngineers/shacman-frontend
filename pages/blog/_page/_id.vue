@@ -4,7 +4,7 @@
             <h1 class="text-uppercase mb-md-14 mb-9">Блог</h1>
             <template v-if="articles.length != 0">
                 <article-list :articles="articles"></article-list>
-                <Pagination class="mt-8" v-if="meta?.last_page !== 1" :isFirst="true" :meta="meta" />
+                <Pagination class="mt-8" :meta="meta" />
             </template>
             <h2 v-else>Статей нет, посетите другие разделы</h2>
         </v-container>
@@ -40,6 +40,9 @@ export default {
             ],
         };
     },
+    data() {
+        return {};
+    },
     created() {
         this.$store.commit("onVisabilityHeader");
         this.$store.commit("setBreadCrumbs", [
@@ -57,10 +60,12 @@ export default {
             },
         ]);
     },
-    async asyncData({ store, error }) {
+    async asyncData({ store, error, params }) {
         try {
             const { data, meta } = await store
-                .dispatch("loadArticlesPaginate", { page: 1 })
+                .dispatch("loadArticlesPaginate", {
+                    page: params.id,
+                })
                 .then((r) => r.data);
             return { articles: data, meta };
         } catch (e) {

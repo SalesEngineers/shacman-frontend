@@ -72,7 +72,7 @@
                     ></v-contacts-map>
                     <div class="map-disable-wrapper" v-else></div>
                     <v-card class="contacts__main-info shadow-card" v-if="currentCity">
-                        <div class="contacts__single pr-0 pr-sm-8 pr-lg-0" v-if="currentCity.phone">
+                        <div class="contacts__single pr-0 pr-sm-8 pr-lg-0" v-if="currentCity?.phone">
                             <div class="contacts_img-wrapper mb-4 mb-md-8">
                                 <img src="/img/icons/phone.svg" alt="phone" />
                             </div>
@@ -84,7 +84,7 @@
                                 >{{ currentCity.phone.name }}</a>
                             </div>
                         </div>
-                        <div class="contacts__single" v-if="currentCity.email">
+                        <div class="contacts__single" v-if="currentCity?.email">
                             <div class="contacts_img-wrapper mb-4 mb-md-8">
                                 <img src="/img/icons/mail.svg" alt="mail" />
                             </div>
@@ -98,14 +98,15 @@
                         </div>
                         <div
                             class="contacts__single pr-0 pr-sm-8 pr-lg-0"
-                            v-if="currentCity.address"
+                            v-if="currentCity?.address"
                         >
                             <div class="contacts_img-wrapper mb-4 mb-md-8">
                                 <img src="/img/icons/marker.svg" alt="marker" />
                             </div>
                             <p class="card-title font-weight-bold mb-2">Адрес</p>
                             <div>
-                                <p class="card-small-text">{{ currentCity.address }}</p>
+                                <p class="card-small-text mb-1">{{ currentCity.address }}</p>
+                                <p class="card-small-text mb-1" v-for="(address, j) in currentCity.addresses" :key="j">{{ address }}</p>
                             </div>
                         </div>
                         <div class="contacts__single" v-if="currentCity.operating_mode.length > 0">

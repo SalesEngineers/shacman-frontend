@@ -124,12 +124,17 @@ export default {
     },
     head () {
         return {
-        title: this.subcategory.seo.title,
-        meta: [
-            { charset: 'utf-8' },
-            { hid: 'description', name: 'description', content: this.subcategory.seo.description},
-            { hid: 'keywords', name: 'keywords', content: this.subcategory.seo.keywords}
-        ]
+            title: this.subcategory.seo.title,
+            meta: [
+                { charset: 'utf-8' },
+                { hid: 'description', name: 'description', content: this.subcategory.seo.description},
+                { hid: 'keywords', name: 'keywords', content: this.subcategory.seo.keywords}
+            ],
+            script: [
+                {
+                    innerHTML: this.subcategory?.script,
+                },
+            ],
         }
     },
     async asyncData ({ $axios, error, route }) {
