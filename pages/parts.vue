@@ -1,7 +1,7 @@
 <template>
     <div>
         <MainWindow
-            :slides="[{image: '/img/parts/slide-1.jpg', title: 'Оригинальные запчасти для грузовой техники Shacman', tag: 'h1', btnTitle: '', link: ''}]"
+            :slides="[{image: '/img/parts/sklad-zapchastej-4.webp', title: 'Оригинальные запчасти для грузовой техники Shacman', tag: 'h1', btnTitle: '', link: ''}]"
         />
         <v-container class="content-padding">
             <v-row align="center" class="block-padding">

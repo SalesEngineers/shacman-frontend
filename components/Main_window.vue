@@ -137,6 +137,9 @@ export default {
 }
 .main-window-wrap img {
     height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 .main-window-content_wrap {
     position: relative;
