@@ -158,6 +158,20 @@ export default {
         return {
             catalogSpec: [],
             slides: [{
+                image: '/img/main-window/banner-shacman-1.webp',
+                title: 'При покупке 3 тягачей SHACMAN установка ПЖД в подарок',
+                notes: [
+                    "*Акция действительна до 31 мая 2024г.",
+                    'Подробности узнавайте у менеджеров компании KOMTRANS Group или на сайте <a href="https://komtrans24.ru" target="_blank">komtrans24.ru</a>'
+                ]
+            },{
+                image: '/img/main-window/banner-shacman-2.webp',
+                title: 'Скидка на ремонт балансировочных валов&nbsp;-&nbsp;25&nbsp;000₽',
+                notes: [
+                    "*Акция действительна до 31 мая 2024г.",
+                    'Подробности узнавайте у менеджеров компании KOMTRANS Group или на сайте <a href="https://komtrans24.ru" target="_blank">komtrans24.ru</a>'
+                ]
+            },{
                 title: 'Новый Shacman X6000 уже в продаже',
                 link: '/product-category/x6000/',
                 btnTitle: 'Перейти в каталог',
