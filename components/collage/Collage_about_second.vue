@@ -23,7 +23,7 @@
     </v-card>
     <v-card class="collage-card div5 pa-5 pa-md-7" outlined>
       <p>
-        <span class="third-text collage-bold-text">1000</span><br>
+        <span class="third-text collage-bold-text">2000</span><br>
         <span>единиц техники реализуется в год</span>
       </p>
     </v-card>
