@@ -67,8 +67,8 @@
 
                 <div class="contacts__main-map">
                     <v-contacts-map
-                        v-if="currentCity && currentCity.map.coords"
-                        :coords="currentCity.map.coords"
+                        v-if="currentCity && currentCity.map"
+                        :map="currentCity.map"
                     ></v-contacts-map>
                     <div class="map-disable-wrapper" v-else></div>
                     <v-card class="contacts__main-info shadow-card" v-if="currentCity">
