@@ -232,9 +232,12 @@ export default {
 
     methods: {
         arrayChunks(array, size) {
-            const chunkSize = Math.round(array.length / size);
-            const chunks = [];
+            if (array.length === 0) return [];
 
+            let chunkSize = Math.round(array.length / size);
+            if (chunkSize === 0) chunkSize = 1; // Устанавливаем минимальный размер чанка в 1
+
+            const chunks = [];
             for (let i = 0; i < array.length; i += chunkSize) {
                 const chunk = array.slice(i, i + chunkSize);
                 chunks.push(chunk);
