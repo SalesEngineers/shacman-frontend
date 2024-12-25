@@ -8,7 +8,7 @@
     </v-card>
     <v-card class="collage-card div2 pa-5 pa-md-7" outlined>
       <p>
-        <span class="third-text collage-bold-text">28</span><br>
+        <span class="third-text collage-bold-text">20</span><br>
         <span>филиалов в крупных городах</span>
       </p>
     </v-card>
