@@ -3,7 +3,7 @@
         <v-col
             cols="12"
             sm="6"
-            md="4"
+            md="3"
             lg="3"
             v-for="(item, index) in mainCharacteristicsArray"
             :key="item.id"

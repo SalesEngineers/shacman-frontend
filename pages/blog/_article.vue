@@ -73,6 +73,8 @@
 <script>
 import { mapState } from "vuex";
 export default {
+    scrollToTop: true,
+    
     head() {
         return {
             title: this.article.seo.title,

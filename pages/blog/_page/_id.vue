@@ -19,6 +19,9 @@ export default {
         ArticleList,
         Pagination,
     },
+    
+    scrollToTop: true,
+
     head() {
         return {
             title: "Блог - Официальный дилер техники",
