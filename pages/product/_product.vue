@@ -42,7 +42,7 @@
                     </v-col>
                     <v-col cols="12" md="6">
                         <div class="product-content product-card-text mb-5">
-                            <div class="d-flex flex-wrap mb-lg-10 mb-sm-9 mb-8 mb-8">
+                            <!-- <div class="d-flex flex-wrap mb-lg-10 mb-sm-9 mb-8 mb-8">
                                 <span
                                     v-for="(item, index) in product.labels"
                                     :key="index"
@@ -61,7 +61,7 @@
                                         class="px-2 py-1 text-lowercase product-content__label product-content__label_service d-block"
                                     >сервис</span>
                                 </nuxt-link>
-                            </div>
+                            </div> -->
                             <div
                                 class="mb-lg-11 mb-sm-10 mb-9 product-characteristics"
                                 v-if="mainCharacteristics.length != 0"
@@ -94,7 +94,7 @@
                                 <!-- <span class="sub-primary-text href-primary underline-href font-weight-bold" @click="$store.commit('onModalWindow', {title: 'Записаться на тест-драйв', btnName: 'Записаться'})">Записаться на тест-драйв</span> -->
                             </div>
                         </div>
-                        <div class="lizing-content test-drive-link__wrapeer">
+                        <!-- <div class="lizing-content test-drive-link__wrapeer">
                             <p
                                 class="mb-0 font-weight-bold text-uppercase"
                             >{{ product.categories[product.categories.length - 1].name }} в лизинг</p>
@@ -104,9 +104,35 @@
                                 class="product-card-text href-primary underline-href font-weight-bold"
                                 @click="$store.commit('onModalWindow', {title: 'Рассчитать лизинг', btnName: 'Рассчитать'})"
                             >Рассчитать лизинг</span>
-                        </div>
+                        </div> -->
                     </v-col>
                 </v-row>
+                <div class="mt-10">
+                    <v-row>
+                        <v-col cols="12" md="4" class="mb-sm-3">
+                            <div class="utp">
+                                <div class="utp-title mb-4">Стоимость доставки до места эксплуатации</div>
+                                <div>
+                                    <p class="mb-2">Тралом - <strong>160 рублей</strong> один километр</p>
+                                    <p class="mb-0">Фурой - <strong>80 рублей</strong> километр</p>
+                                </div>
+                            </div>
+                        </v-col>
+                        <v-col cols="12" md="4" class="mb-sm-3">
+                            <div class="utp">
+                                <div class="utp-title mb-4">Срок поставки - 800 км в день до места эксплуатации</div>
+                                <div class="mb-1"><strong>В доставку в ходит:</strong></div>
+                                <p class="mb-0">Загрузка / Доставка / Разгрузка / Узловая сборка и тестирование / Ввод в эксплуатацию</p>
+                            </div>
+                        </v-col>
+                        <v-col cols="12" md="4">
+                            <div class="utp">
+                                <div class="utp-title mb-4">Максимально удобные условия лизинга -</div>
+                                <p class="mb-0">первоначальный <strong>взнос</strong> от 0, <strong>срок</strong> от одного года до 5 лет</p>
+                            </div>
+                        </v-col>
+                    </v-row>
+                </div>
             </div>
 
             <div class="block-padding">
@@ -182,6 +208,8 @@
                     </Tabs> 
                 </div>
             </div>
+
+            <v-advantages :items="advantages" hide-title></v-advantages>
 
             <div style="display: none;" v-if="product.script" v-html="product.script"></div>
 
@@ -372,6 +400,28 @@ export default {
             mainImgAlt: "",
             mainImgTitle: "",
             activeSlide: 0,
+            advantages: [{
+                name: "KOMTRANS Group обладает крупнейшей сетью сервисных центров XCMG в России.",
+                content: "<p>Только профессионалы с опытом работы и необходимыми сертификатами осуществляют ремонт спецтехники в короткие сроки.</p><p>30 выездных бригад для обслуживания техники на месте её работы.</p><p>От стандартной диагностики до полного восстановления - KOMTRANS Group справится с любой задачей.</p>",
+                video: {
+                    url: "https://rutube.ru/play/embed/72f8e9d233133b504d2abf6391449e48/",
+                    title: ""
+                }
+            }, {
+                name: "KOMTRANS Group — Обладает крупнейшим складом запасных частей в наличии для брендов XCMG, SHACMAN, DAYUN",
+                content: "<p>Склады в Москве, Екатеринбурге, Новокузнецке, Красноярске, Иркутске, Хабаровске.</p><p>Оперативная обработка заказа и быстрая доставка по всей России.</p><p>Вы можете забрать заказ в одном из наших 28 филиалов или доставка транспортной компанией до удобного Вам места.</p><p>Гарантия на запчасти от производителя: Мы уверены в качестве своей продукции!</p><p>Широкий ассортимент, конкурентные цены и оперативные сроки.</p>",
+                video: {
+                    url: "https://rutube.ru/play/embed/422245ada96f19938b9b2d14e2e99c49/",
+                    title: ""
+                }
+            }, {
+                name: "Логистика в KOMTRANS Group это оптимальный способ доставки под вас: автотранспортом, железнодорожным транспортом, морским транспортом.",
+                content: "<p>Доставляем технику в любую точку России, включая труднодоступные районы крайнего севера.</p><p>Собственный парк автовозов позволяет нам максимально сократить сроки и осуществлять выгодную доставку.</p><p>Обязательства по срокам доставки закреплены в договоре.</p>",
+                video: {
+                    url: "https://rutube.ru/play/embed/280dd40c96ecb120aad722172e72e48f/",
+                    title: ""
+                }
+            }]
         };
     },
     computed: {
@@ -525,20 +575,14 @@ export default {
         }
 
         //Главные характеристики
-        this.characteristics = this.product.characteristics;
-        this.product.characteristics.forEach((char) => {
-            this.product.categories[
-                this.product.categories.length - 1
-            ].product_main_characteristic_ids.forEach((mainChar) => {
-                if (char.id == mainChar) {
-                    this.mainCharacteristics.push(char);
-                    this.characteristics = this.characteristics.filter(
-                        function (item) {
-                            return item !== char;
-                        }
-                    );
-                }
-            });
+        this.characteristics = [];
+        
+        this.product?.characteristics.forEach((char) => {
+            if (char.is_main) {
+                this.mainCharacteristics.push(char);
+            } else {
+                this.characteristics.push(char);
+            }
         });
     },
     methods: {
@@ -559,6 +603,36 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.utp {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    font-size: 18px;
+
+    @include md {
+        font-size: 16px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    @include sm {
+        text-align: left;
+    }
+}
+.utp-title {
+    text-transform: uppercase;
+    font-weight: bold;    
+    font-family: $title_bold, sans-serif;
+    font-size: 20px;
+    color: $primary-color;
+
+    @include md {
+        font-size: 18px;
+    }
+}
+.product-price {
+    font-size: 24px;
+}
 .group {
     border-bottom: 1px solid #dfe9eb;
     padding-bottom: 5px;
@@ -843,6 +917,11 @@ h3 {
     }
 }
 @include xss {
+    .product-price {
+        text-align: right;
+        width: 100%;
+    }
+
     .product-links {
         flex-direction: column;
     }

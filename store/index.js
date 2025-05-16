@@ -1,5 +1,7 @@
 import * as axios from "axios";
 
+const baseURL = 'https://api.shacman-rf.ru';
+
 export const state = () => ({
   visabilityHeader: false,
   breadcrumbs: [],
@@ -37,7 +39,7 @@ export const actions = {
   },
   async loadCategories({ commit }) {
     await axios
-      .get(`https://api.shacman-rf.ru/api/categories`)
+      .get(`${baseURL}/api/categories`)
       .then((r) => r.data.data)
       .then((categories) => {
         commit("setCategories", categories);
@@ -45,7 +47,7 @@ export const actions = {
   },
   async loadSettings({ commit }) {
     await axios
-      .get(`https://api.shacman-rf.ru/api/settings`)
+      .get(`${baseURL}/api/settings`)
       .then((r) => r.data.data)
       .then((settings) => {
         commit("setSettings", settings);
@@ -53,7 +55,7 @@ export const actions = {
   },
   async loadContacts({ commit }) {
     await axios
-      .get(`https://api.shacman-rf.ru/api/contacts`)
+      .get(`${baseURL}/api/contacts`)
       .then((r) => r.data.data)
       .then((contacts) => {
         commit("setContacts", contacts);
@@ -62,7 +64,7 @@ export const actions = {
   },
   async loadArticles({ commit }) {
     await axios
-      .get(`https://api.shacman-rf.ru/api/articles`)
+      .get(`${baseURL}/api/articles`)
       .then((r) => r.data.data)
       .then((articles) => {
         commit("setArticles", articles);
@@ -70,7 +72,7 @@ export const actions = {
   },
   async loadDynamicContact({ commit }, ip) {
     await axios
-      .get(`https://api.shacman-rf.ru/api/contacts/dynamic`, { params: { ip } })
+      .get(`${baseURL}/api/contacts/dynamic`, { params: { ip } })
       .then((r) => r.data.data)
       .then((contact) => {
         commit("setDynamicContact", contact);
@@ -84,10 +86,10 @@ export const actions = {
   },
   async loadContact(_, slug) {
     return await axios
-      .get(`https://api.shacman-rf.ru/api/contacts/${slug}/show`)
+      .get(`${baseURL}/api/contacts/${slug}/show`)
   },
   async loadArticlesPaginate(_, params) {
-    return await axios.get(`https://api.shacman-rf.ru/api/articles`, { params });
+    return await axios.get(`${baseURL}/api/articles`, { params });
   }
 };
 

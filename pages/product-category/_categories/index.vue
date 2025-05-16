@@ -35,14 +35,6 @@
                         </v-col>
                     </v-row>                   
                 </div>
-
-                <div class="subcategories" v-if="category.children.length != 0">
-                    <template v-for="item, index in category.children">
-                        <nuxt-link v-if="item.is_active" :key="index" :to="`${$route.path}${item.url}/`" class="mr-4 subcategory">
-                            <v-btn class="mb-4 text-none">{{ item.name }}</v-btn>
-                        </nuxt-link>   
-                    </template>
-                </div>
             </div>
 
             <div class="block-padding">
@@ -64,9 +56,19 @@
             
             <div v-if="!statusSort && meta && meta.last_page > 1 && products.length != 0 && !loader" class="block-padding">
                 <Pagination :isFirst="true" :meta="meta"/>
+            </div>            
+
+            <div class="subcategories block-padding mt-16" v-if="category.children.length != 0">
+                <template v-for="item, index in category.children">
+                    <nuxt-link v-if="item.is_active" :key="index" :to="`${$route.path}${item.url}/`" class="mr-4 subcategory">
+                        <v-btn class="mb-4 text-none">{{ item.name }}</v-btn>
+                    </nuxt-link>   
+                </template>
             </div>
 
-            <CategoryInfo v-if="category.id == 3"/>
+            <v-advantages :items="advantages" hide-title></v-advantages>
+
+            <!-- <CategoryInfo v-if="category.id == 3"/> -->
 
             <div class="block-padding category-content" v-if="category.content" v-html="category.content">
             </div>
@@ -131,7 +133,29 @@ export default {
             filters: null,
             meta: null,
             productsFiltered: [],
-            statusSort: false
+            statusSort: false,
+            advantages: [{
+                name: "KOMTRANS Group обладает крупнейшей сетью сервисных центров XCMG в России.",
+                content: "<p>Только профессионалы с опытом работы и необходимыми сертификатами осуществляют ремонт спецтехники в короткие сроки.</p><p>30 выездных бригад для обслуживания техники на месте её работы.</p><p>От стандартной диагностики до полного восстановления - KOMTRANS Group справится с любой задачей.</p>",
+                video: {
+                    url: "https://rutube.ru/play/embed/72f8e9d233133b504d2abf6391449e48/",
+                    title: ""
+                }
+            }, {
+                name: "KOMTRANS Group — Обладает крупнейшим складом запасных частей в наличии для брендов XCMG, SHACMAN, DAYUN",
+                content: "<p>Склады в Москве, Екатеринбурге, Новокузнецке, Красноярске, Иркутске, Хабаровске.</p><p>Оперативная обработка заказа и быстрая доставка по всей России.</p><p>Вы можете забрать заказ в одном из наших 28 филиалов или доставка транспортной компанией до удобного Вам места.</p><p>Гарантия на запчасти от производителя: Мы уверены в качестве своей продукции!</p><p>Широкий ассортимент, конкурентные цены и оперативные сроки.</p>",
+                video: {
+                    url: "https://rutube.ru/play/embed/422245ada96f19938b9b2d14e2e99c49/",
+                    title: ""
+                }
+            },{
+                name: "Логистика в KOMTRANS Group это оптимальный способ доставки под вас: автотранспортом, железнодорожным транспортом, морским транспортом.",
+                content: "<p>Доставляем технику в любую точку России, включая труднодоступные районы крайнего севера.</p><p>Собственный парк автовозов позволяет нам максимально сократить сроки и осуществлять выгодную доставку.</p><p>Обязательства по срокам доставки закреплены в договоре.</p>",
+                video: {
+                    url: "https://rutube.ru/play/embed/280dd40c96ecb120aad722172e72e48f/",
+                    title: ""
+                }
+            }]
         }
     },
     head () {

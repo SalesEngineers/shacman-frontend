@@ -6,7 +6,16 @@
             </h1>
             <!-- <Banner class="block-padding"/> -->
 
-            <div class="block-padding" v-if="catalogSpec.length != 0">
+            <div v-if="categories.length > 0">
+                <div v-for="category in categories" :key="category.id">
+                    <div v-if="category.children.length" class="block-padding">
+                        <h2 class="text-uppercase mb-md-14 mb-9">{{ category.name }}</h2>
+                        <Catalog :items="category.children" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="block-padding" v-if="catalogSpec.length != 0">
                 <h2 class="text-uppercase mb-md-14 mb-9">
                     Грузовая техника
                 </h2>
@@ -17,7 +26,7 @@
                     Навесное оборудование
                 </h2>
                 <Catalog :items="catalogNaves"/>
-            </div>
+            </div> -->
 
             <div v-if="settings.video" class="block-padding">
               <v-row>
@@ -49,6 +58,7 @@ export default {
         Banner,
         Catalog
     },
+    
     head () {
         return {
             title: 'Каталог китайской грузовой техники Shacman по выгодным ценам',
@@ -59,12 +69,7 @@ export default {
             ]
         }
     },
-    data() {
-        return {
-            catalogSpec: [],
-            catalogNaves: []
-        }
-    },
+
     created() {
         this.$store.commit('onVisabilityHeader')
         this.$store.commit('setBreadCrumbs', 
@@ -83,36 +88,12 @@ export default {
             },
         ])
     },
-    mounted() {
-        this.getCategories()
-    },
+
     computed: {
         ...mapState([
             'categories',
             'settings'
         ])
-    },
-    watch: {
-        categories() {
-            this.catalogSpec = []
-            this.catalogNaves = []
-            this.getCategories()
-        }
-    },
-    methods: {
-        getCategories() {
-            this.categories.forEach(element => {
-                if (element.id == 1) {
-                    element.children.forEach(category => {
-                        this.catalogNaves.push(category)
-                    });
-                } else {
-                    element.children.forEach(category => {
-                        this.catalogSpec.push(category)
-                    });
-                }
-            });
-        }
     },
 }
 </script>
