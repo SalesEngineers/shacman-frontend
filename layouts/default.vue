@@ -8,6 +8,8 @@
 
     <Footer/>
     <Modal/>
+
+    <CookiesBanner />
   </v-app>
 </template>
 
@@ -15,13 +17,15 @@
 import Header from '~/components/Header.vue'
 import Footer from '~/components/Footer.vue'
 import Modal from '~/components/ModalWindow.vue'
+import CookiesBanner from "~/components/CookiesBanner.vue"
 
 export default {
   name: 'DefaultLayout',
   components: {
     Header,
     Footer,
-    Modal
+    Modal,
+    CookiesBanner
   },
   data () {
     return {

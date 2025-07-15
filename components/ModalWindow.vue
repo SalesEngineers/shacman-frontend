@@ -34,8 +34,15 @@
                     single-line
                 ></v-text-field>
             </div>
-            <v-btn class="modal-window_button text-none font-weight-bold mb-4" color="primary" @click="order()">{{ modalContent.btnName }}</v-btn>
-            <p class="ma-0" style="opacity:0.5;">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</p>
+            <v-btn class="modal-window_button text-none font-weight-bold mb-4" :disabled="!agree" color="primary" @click="order()">{{ modalContent.btnName }}</v-btn>
+            <v-checkbox v-model="agree" class="mt-0">
+                <template v-slot:label>
+                    <div>
+                        Нажимая кнопку «{{ modalContent.btnName }}» Вы даете согласие на обработку
+                        <a href="/privacy/" target="_blank" class="link font-weight-bold" @click.stop><span>персональных данных</span></a>.
+                    </div>
+                </template>
+            </v-checkbox>
         </v-form>
       </v-card>
     </v-dialog>
@@ -49,7 +56,8 @@ export default {
     data() {
         return {
             name: '',
-            phone: ''
+            phone: '',
+            agree: false
         }
     },
     computed: {
@@ -152,6 +160,14 @@ export default {
 </style>
 
 <style lang="scss">
+.link {
+    color: inherit;
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
     .v-dialog {
         box-shadow: $card-shadow !important;
     }
