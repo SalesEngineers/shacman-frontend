@@ -63,16 +63,16 @@
                                 </nuxt-link>
                             </div> -->
                             <div
-                                class="mb-lg-11 mb-sm-10 mb-9 product-characteristics"
+                                class="mb-lg-11 mb-sm-10 mb-9 product-characteristic-list"
                                 v-if="mainCharacteristics.length != 0"
                             >
                                 <div
-                                    class="d-flex justify-space-between"
+                                    class="d-flex justify-space-between product-characteristic-item"
                                     v-for="(item, index) in mainCharacteristics"
                                     :key="index"
                                 >
                                     <p class="font-weight-bold">{{ item.name }}</p>
-                                    <p>{{ item.value }}</p>
+                                    <p class="text-right">{{ item.value }}</p>
                                 </div>
                             </div>
                             <div class="product-links test-drive-link__wrapeer">
@@ -684,7 +684,33 @@ h3 {
     border-radius: 4px;
 }
 .product-characteristics {
-    padding: 0 20px;
+    padding: 0 20px;    
+}
+.product-characteristic-list {
+    font-size: 16px;
+}
+.product-characteristic-item {
+    padding: 8px 10px;
+
+    &:first-child {
+        padding-top: 0;
+    }
+
+    &:not(:last-child) {
+        border-bottom: 1px solid #f4f4f4;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    p:first-child {
+        min-width: 25%;
+    }
+
+    p:last-child {
+        padding-left: 8px;
+    }
 }
 .product-characteristic {
     line-height: 1.2;
