@@ -9,7 +9,13 @@
     <Footer/>
     <Modal/>
 
-    <CookiesBanner />
+    <client-only>
+        <ServiceWidget />
+    </client-only>
+
+    <client-only>
+        <CookiesBanner />
+    </client-only>
   </v-app>
 </template>
 
@@ -18,6 +24,7 @@ import Header from '~/components/Header.vue'
 import Footer from '~/components/Footer.vue'
 import Modal from '~/components/ModalWindow.vue'
 import CookiesBanner from "~/components/CookiesBanner.vue"
+import ServiceWidget from "~/components/ServiceWidget.vue";
 
 export default {
   name: 'DefaultLayout',
@@ -25,7 +32,8 @@ export default {
     Header,
     Footer,
     Modal,
-    CookiesBanner
+    CookiesBanner,
+    ServiceWidget
   },
   data () {
     return {
