@@ -37,7 +37,8 @@ export default {
     { src: '~/plugins/ymapPlugin.js', mode: 'client' }, 
     { src: '~/plugins/localStorage.js', mode: 'client' },
     { src: '~/plugins/v-mask.js', mode: 'client' },
-    { src:  '~/plugins/filters.js' }
+    { src:  '~/plugins/filters.js' },
+   { src: '~/plugins/maskot.js', mode: 'client' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
