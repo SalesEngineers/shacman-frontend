@@ -17,7 +17,7 @@ export default {
     methods: {
         goToCatalog() {
             this.close();
-            window.open("https://chinasparts.ru/category/komplekty-dlya-obsluzhivaniya-spectekhniki/", "_blank");
+            window.open("https://chinasparts.ru/category/komplekty-dlya-obsluzhivaniya-spectekhniki-shacman/", "_blank");
         },
 
         open() {
