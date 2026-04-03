@@ -1,6 +1,6 @@
 import * as axios from "axios";
 
-const baseURL = 'https://api.shacman-rf.ru';
+const baseURL = 'https://api.shacman-ru.ru';
 
 export const state = () => ({
   visabilityHeader: false,

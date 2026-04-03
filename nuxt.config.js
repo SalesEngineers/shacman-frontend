@@ -58,7 +58,7 @@ export default {
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   axios: {
-    baseURL: "https://api.shacman-rf.ru/api",
+    baseURL: "https://api.shacman-ru.ru/api",
   },
   
   redirect: [
